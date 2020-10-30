@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/migrations" path="/ldc-dcim/cabinet-manager/v1/migrations" id="308d5012-f7c6-4502-854a-48768804fcbf" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="308d5012-f7c6-4502-854a-48768804fcbffileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fmigrations</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getMigrationCollection" id="01d57141-d248-4fd2-8ede-38c8cfdee665" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>status</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>status[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[startAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[endAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[status]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[createdAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="9c81383f-1df1-499b-ad5a-015b27c4d6df" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="order[startAt]" value=""/>
+        <con:entry key="order[status]" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="order[createdAt]" value=""/>
+        <con:entry key="status[]" value=""/>
+        <con:entry key="order[endAt]" value=""/>
+        <con:entry key="status" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>status</con:entry>
+        <con:entry>status[]</con:entry>
+        <con:entry>order[startAt]</con:entry>
+        <con:entry>order[endAt]</con:entry>
+        <con:entry>order[status]</con:entry>
+        <con:entry>order[createdAt]</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="postMigrationCollection" id="1b66b8ff-676e-46d9-b19d-ce5bd5efded9" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="3727b331-0b43-4c07-bfcf-9d4fa21eba6d" mediaType="application/hal+json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

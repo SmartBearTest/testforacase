@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/taxonomy/taxonomy/v1/level_systems/{id}/levels" path="/taxonomy/taxonomy/v1/level_systems/{id}/levels" id="12847aa6-db01-44ef-be3c-15a9507f3a03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="12847aa6-db01-44ef-be3c-15a9507f3a03fileName">%2Ftaxonomy%2Ftaxonomy%2Fv1%2Flevel_systems%2F%7Bid%7D%2Flevels</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="api_level_systems_levels_get_subresource" id="429928a1-57ca-467b-a0b2-15a57cb9e48a" method="GET">
+    <con:description>Retrieves the collection of Level resources.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "rank" : 0,
+  "levelSystem" : "/taxonomy/taxonomy/v1/level_systems/{id}",
+  "createdBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedBy" : "string",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name" : "string",
+  "description" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="d8668d22-7f7a-4945-8f53-6a9e4a049ca1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="page" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+</con:resource>

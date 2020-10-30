@@ -1,0 +1,1262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/devices" path="/ldc-dcim/cabinet-manager/v1/devices" id="528f7e8d-7ad7-4215-8eee-18f4ce08c436" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="528f7e8d-7ad7-4215-8eee-18f4ce08c436fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevices</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getDeviceCollection" id="7f203e96-c5cd-4fbc-9881-889a7d859954" method="GET">
+    <con:description>Retrieves the collection of Device resources.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="false">
+        <con:name>name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>serialNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>serialNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>assetNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>assetNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>barcodeNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>barcodeNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>serviceTag</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>serviceTag[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modelNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modelNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>manufacturer</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>deviceType</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>deviceType[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>width</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>width[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>height</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>height[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>depth</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>depth[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>ru</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>ru[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>posts</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>posts[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>weight</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>weight[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>inputVoltage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>inputVoltage[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>outputVoltage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>outputVoltage[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[width]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[height]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[depth]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[ru]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[posts]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[weight]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[inputVoltage]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[outputVoltage]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[createdAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[modifiedAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>search</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>Filter Using OR by properties</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[manufacturer]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[modelNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[serialNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[assetNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deviceStatus.name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deviceStatus.name[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deviceStatus.guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>deviceStatus.guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.cabinet.name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>exists[slotInstallations]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>exists[installations]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[installations.cabinet.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.cabinet.guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.cabinet.guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.position</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.position[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>notes</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.ruPosition</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>installations.ruPosition[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[serviceTag]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[deviceType.id]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[deviceType.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[deviceStatus.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[deviceOwner.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[deviceOwner.email]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[installations.ruPosition]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[installations.position]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[devicePorts]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[deviceSlots]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[installations]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>group</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>[ {
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="3d6ac811-0ef2-4ad3-9e0f-1e43572b25ca" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="barcodeNumber" value=""/>
+        <con:entry key="installations.position" value=""/>
+        <con:entry key="notes" value=""/>
+        <con:entry key="deviceStatus.name" value=""/>
+        <con:entry key="order[deviceOwner.name]" value=""/>
+        <con:entry key="posts" value=""/>
+        <con:entry key="order[deviceSlots]" value=""/>
+        <con:entry key="createdAt[strictly_after]" value=""/>
+        <con:entry key="order[manufacturer]" value=""/>
+        <con:entry key="height[]" value=""/>
+        <con:entry key="order[deviceType.id]" value=""/>
+        <con:entry key="assetNumber" value=""/>
+        <con:entry key="order[depth]" value=""/>
+        <con:entry key="installations.ruPosition[]" value=""/>
+        <con:entry key="inputVoltage[]" value=""/>
+        <con:entry key="serviceTag[]" value=""/>
+        <con:entry key="modifiedAt[after]" value=""/>
+        <con:entry key="serviceTag" value=""/>
+        <con:entry key="order[installations.ruPosition]" value=""/>
+        <con:entry key="order[deviceType.name]" value=""/>
+        <con:entry key="modifiedAt[before]" value=""/>
+        <con:entry key="deviceStatus.guid" value=""/>
+        <con:entry key="exists[slotInstallations]" value=""/>
+        <con:entry key="height" value=""/>
+        <con:entry key="order[installations]" value=""/>
+        <con:entry key="group" value=""/>
+        <con:entry key="deviceType" value=""/>
+        <con:entry key="order[ru]" value=""/>
+        <con:entry key="outputVoltage[]" value=""/>
+        <con:entry key="serialNumber" value=""/>
+        <con:entry key="order[assetNumber]" value=""/>
+        <con:entry key="serialNumber[]" value=""/>
+        <con:entry key="modifiedAt[strictly_after]" value=""/>
+        <con:entry key="order[modelNumber]" value=""/>
+        <con:entry key="weight" value=""/>
+        <con:entry key="order[inputVoltage]" value=""/>
+        <con:entry key="order[height]" value=""/>
+        <con:entry key="order[installations.cabinet.name]" value=""/>
+        <con:entry key="modifiedAt[strictly_before]" value=""/>
+        <con:entry key="order[serviceTag]" value=""/>
+        <con:entry key="createdAt[before]" value=""/>
+        <con:entry key="name" value=""/>
+        <con:entry key="guid" value=""/>
+        <con:entry key="deviceType[]" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="width[]" value=""/>
+        <con:entry key="createdAt[strictly_before]" value=""/>
+        <con:entry key="ru" value=""/>
+        <con:entry key="deviceStatus.guid[]" value=""/>
+        <con:entry key="createdAt[after]" value=""/>
+        <con:entry key="inputVoltage" value=""/>
+        <con:entry key="depth[]" value=""/>
+        <con:entry key="guid[]" value=""/>
+        <con:entry key="manufacturer" value=""/>
+        <con:entry key="ru[]" value=""/>
+        <con:entry key="weight[]" value=""/>
+        <con:entry key="order[modifiedAt]" value=""/>
+        <con:entry key="search" value=""/>
+        <con:entry key="order[width]" value=""/>
+        <con:entry key="installations.position[]" value=""/>
+        <con:entry key="installations.cabinet.name" value=""/>
+        <con:entry key="order[deviceOwner.email]" value=""/>
+        <con:entry key="posts[]" value=""/>
+        <con:entry key="order[createdAt]" value=""/>
+        <con:entry key="barcodeNumber[]" value=""/>
+        <con:entry key="modelNumber[]" value=""/>
+        <con:entry key="order[devicePorts]" value=""/>
+        <con:entry key="installations.cabinet.guid[]" value=""/>
+        <con:entry key="outputVoltage" value=""/>
+        <con:entry key="order[serialNumber]" value=""/>
+        <con:entry key="installations.cabinet.guid" value=""/>
+        <con:entry key="order[posts]" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="installations.ruPosition" value=""/>
+        <con:entry key="order[outputVoltage]" value=""/>
+        <con:entry key="order[weight]" value=""/>
+        <con:entry key="assetNumber[]" value=""/>
+        <con:entry key="exists[installations]" value=""/>
+        <con:entry key="depth" value=""/>
+        <con:entry key="order[deviceStatus.name]" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="width" value=""/>
+        <con:entry key="deviceStatus.name[]" value=""/>
+        <con:entry key="modelNumber" value=""/>
+        <con:entry key="order[name]" value=""/>
+        <con:entry key="order[installations.position]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>name</con:entry>
+        <con:entry>serialNumber</con:entry>
+        <con:entry>serialNumber[]</con:entry>
+        <con:entry>assetNumber</con:entry>
+        <con:entry>assetNumber[]</con:entry>
+        <con:entry>barcodeNumber</con:entry>
+        <con:entry>barcodeNumber[]</con:entry>
+        <con:entry>serviceTag</con:entry>
+        <con:entry>serviceTag[]</con:entry>
+        <con:entry>modelNumber</con:entry>
+        <con:entry>modelNumber[]</con:entry>
+        <con:entry>manufacturer</con:entry>
+        <con:entry>deviceType</con:entry>
+        <con:entry>deviceType[]</con:entry>
+        <con:entry>width</con:entry>
+        <con:entry>width[]</con:entry>
+        <con:entry>height</con:entry>
+        <con:entry>height[]</con:entry>
+        <con:entry>depth</con:entry>
+        <con:entry>depth[]</con:entry>
+        <con:entry>ru</con:entry>
+        <con:entry>ru[]</con:entry>
+        <con:entry>posts</con:entry>
+        <con:entry>posts[]</con:entry>
+        <con:entry>weight</con:entry>
+        <con:entry>weight[]</con:entry>
+        <con:entry>inputVoltage</con:entry>
+        <con:entry>inputVoltage[]</con:entry>
+        <con:entry>outputVoltage</con:entry>
+        <con:entry>outputVoltage[]</con:entry>
+        <con:entry>order[width]</con:entry>
+        <con:entry>order[height]</con:entry>
+        <con:entry>order[depth]</con:entry>
+        <con:entry>order[ru]</con:entry>
+        <con:entry>order[posts]</con:entry>
+        <con:entry>order[weight]</con:entry>
+        <con:entry>order[inputVoltage]</con:entry>
+        <con:entry>order[outputVoltage]</con:entry>
+        <con:entry>order[createdAt]</con:entry>
+        <con:entry>order[modifiedAt]</con:entry>
+        <con:entry>createdAt[before]</con:entry>
+        <con:entry>createdAt[strictly_before]</con:entry>
+        <con:entry>createdAt[after]</con:entry>
+        <con:entry>createdAt[strictly_after]</con:entry>
+        <con:entry>modifiedAt[before]</con:entry>
+        <con:entry>modifiedAt[strictly_before]</con:entry>
+        <con:entry>modifiedAt[after]</con:entry>
+        <con:entry>modifiedAt[strictly_after]</con:entry>
+        <con:entry>search</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>order[name]</con:entry>
+        <con:entry>order[manufacturer]</con:entry>
+        <con:entry>order[modelNumber]</con:entry>
+        <con:entry>order[serialNumber]</con:entry>
+        <con:entry>order[assetNumber]</con:entry>
+        <con:entry>deviceStatus.name</con:entry>
+        <con:entry>deviceStatus.name[]</con:entry>
+        <con:entry>deviceStatus.guid</con:entry>
+        <con:entry>deviceStatus.guid[]</con:entry>
+        <con:entry>installations.cabinet.name</con:entry>
+        <con:entry>exists[slotInstallations]</con:entry>
+        <con:entry>exists[installations]</con:entry>
+        <con:entry>order[installations.cabinet.name]</con:entry>
+        <con:entry>installations.cabinet.guid</con:entry>
+        <con:entry>installations.cabinet.guid[]</con:entry>
+        <con:entry>installations.position</con:entry>
+        <con:entry>installations.position[]</con:entry>
+        <con:entry>notes</con:entry>
+        <con:entry>installations.ruPosition</con:entry>
+        <con:entry>installations.ruPosition[]</con:entry>
+        <con:entry>order[serviceTag]</con:entry>
+        <con:entry>order[deviceType.id]</con:entry>
+        <con:entry>order[deviceType.name]</con:entry>
+        <con:entry>order[deviceStatus.name]</con:entry>
+        <con:entry>order[deviceOwner.name]</con:entry>
+        <con:entry>order[deviceOwner.email]</con:entry>
+        <con:entry>order[installations.ruPosition]</con:entry>
+        <con:entry>order[installations.position]</con:entry>
+        <con:entry>order[devicePorts]</con:entry>
+        <con:entry>order[deviceSlots]</con:entry>
+        <con:entry>order[installations]</con:entry>
+        <con:entry>guid</con:entry>
+        <con:entry>guid[]</con:entry>
+        <con:entry>group</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="postDeviceCollection" id="e702626e-302d-4e09-a84c-ebfc89d77df9" method="POST">
+    <con:description>Creates a Device resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ { } ],
+  "guid" : "string",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4,
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="1e14291b-ccaf-427b-ab34-5fdf54d97a49" mediaType="application/hal+json">
+      <con:description>Creates a Device resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+    <con:request name="Request 2" id="1e416117-7d34-4f2e-a82c-2f1b9bfd44c6" mediaType="application/json">
+      <con:description>Creates a Device resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ { } ],
+  "guid" : "string",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4,
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+    <con:request name="Request 3" id="bd00bf23-c4a4-456c-bd59-70590dfba2bb" mediaType="text/html">
+      <con:description>Creates a Device resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+  </con:method>
+</con:resource>

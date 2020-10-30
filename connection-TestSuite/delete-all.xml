@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="d919127e-69cb-44a7-bac6-665b95945b2f" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="delete all" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d919127e-69cb-44a7-bac6-665b95945b2ffileName">delete-all</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get connections" id="013fdff4-967f-4c86-9ae4-3e29d6f47094">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getConnectionCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/connections" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get connections" id="90785a9c-9d6e-4bda-b61f-a9113d161ba3" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/connections</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5f6649f2-2887-4a38-8cd3-09109039faa5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="to.device.guid" value=""/>
+          <con:entry key="modifiedAt[strictly_after]" value=""/>
+          <con:entry key="connectionType" value=""/>
+          <con:entry key="connectionType[]" value=""/>
+          <con:entry key="modifiedAt[strictly_before]" value=""/>
+          <con:entry key="from.device.guid[]" value=""/>
+          <con:entry key="modifiedAt[after]" value=""/>
+          <con:entry key="from.device.guid" value=""/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>from.guid</con:entry>
+          <con:entry>from.guid[]</con:entry>
+          <con:entry>to.guid</con:entry>
+          <con:entry>to.guid[]</con:entry>
+          <con:entry>from.device.guid</con:entry>
+          <con:entry>from.device.guid[]</con:entry>
+          <con:entry>to.device.guid</con:entry>
+          <con:entry>to.device.guid[]</con:entry>
+          <con:entry>connectionType</con:entry>
+          <con:entry>connectionType[]</con:entry>
+          <con:entry>DeviceFromOrTo</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="extract ids" id="946c4fa8-9adc-454a-b09f-cab7baa6b504">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="JSON">
+        <con:configuration>
+          <sourceStep>get connections</sourceStep>
+          <sourceProperty>Response</sourceProperty>
+          <rowPath>$['_embedded']['item']</rowPath>
+          <columnPath>guid</columnPath>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>guid</con:property>
+      <con:startRow/>
+      <con:endRow/>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:gotoLoopOnEmpty>true</con:gotoLoopOnEmpty>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="delete connection" id="b0271892-f18e-4d51-af25-39ffc9c28926">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="deleteConnectionItem" resourcePath="/ldc-dcim/cabinet-manager/v1/connections/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="delete connection" id="23cbba3f-e8ee-4592-ba07-42b65cc40844" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/connections/fb295d4b-a901-4f82-b37c-fdaf5128e0ef</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7ee6151e-0cd8-42de-98df-086c74fb9369" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${extract ids#guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="next id" id="d1820e8f-34ba-4324-8bff-8974b383d2e6">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>extract ids</dataSourceStep>
+      <targetStep>delete connection</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="goto" name="next connections page" id="54e04638-cd0b-4e8e-ae68-8e10aeb6b7c7">
+    <con:settings/>
+    <con:config xsi:type="con:GotoStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:condition>
+        <con:name>more pages</con:name>
+        <con:type>XPATH</con:type>
+        <con:expression>${get connections#Response#$.totalItems} > ${get connections#Response#$.itemsPerPage}</con:expression>
+        <con:targetStep>get connections</con:targetStep>
+      </con:condition>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

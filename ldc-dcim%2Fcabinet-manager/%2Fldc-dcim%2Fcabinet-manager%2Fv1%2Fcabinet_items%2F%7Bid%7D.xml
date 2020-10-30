@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/cabinet_items/{id}" path="/ldc-dcim/cabinet-manager/v1/cabinet_items/{id}" id="a4fb2ffc-5c63-4b1c-a9c4-a7148c13ad10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="a4fb2ffc-5c63-4b1c-a9c4-a7148c13ad10fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fcabinet_items%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter>
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getCabinetItemItem" id="59ed18c0-5245-447e-bbc7-4bcd4398e96f" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="391c769b-78d9-40b2-b5f2-ac8dffc02323" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="organization" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="organization[]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="putCabinetItemItem" id="830221c9-cb01-4669-855b-a7a63bd0fdb3" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="323dcf07-c1ca-4e20-b0cb-02db85a1735d" mediaType="application/hal+json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+  <con:method name="deleteCabinetItemItem" id="1e7a9ea6-e69d-4e2b-a6a6-79e2decd5ffd" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="2b31ae98-26a5-4343-b946-129ffda16f9b" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+</con:resource>

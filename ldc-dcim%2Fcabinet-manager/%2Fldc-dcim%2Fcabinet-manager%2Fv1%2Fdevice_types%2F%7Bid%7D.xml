@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/device_types/{id}" path="/ldc-dcim/cabinet-manager/v1/device_types/{id}" id="1c59a250-5945-4f17-817e-d59a0765a263" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1c59a250-5945-4f17-817e-d59a0765a263fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevice_types%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getDeviceTypeItem" id="af59d67b-b79a-43f5-a3db-299652187cfd" method="GET">
+    <con:description>Retrieves a DeviceType resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "icon" : "string",
+  "name" : "string",
+  "id" : 0,
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="8c38df0f-f71c-4c82-9d48-60b8a05f6d8e" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="putDeviceTypeItem" id="70921e33-c92e-4033-8523-5129dad310ec" method="PUT">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="622f7836-6d18-424d-93d2-4fd41843dee5" mediaType="application/hal+json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+  <con:method name="deleteDeviceTypeItem" id="9be61d66-1fd4-4ffd-8724-5a6076d6efe1" method="DELETE">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="3ab1bf87-e78d-4988-9f04-14fff6e28e25" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+</con:resource>

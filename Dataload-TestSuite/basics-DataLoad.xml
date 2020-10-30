@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="c70f70f3-8d2f-4cdf-b1e7-93d8bf4a025a" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="basics DataLoad" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c70f70f3-8d2f-4cdf-b1e7-93d8bf4a025afileName">basics-DataLoad</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="create custom_field" id="c5414fca-3db7-48b3-bc3b-b4127294b69d">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="postCustomFieldCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="create custom_field" id="69d1b0df-778b-422d-84b4-4a32143f44b9" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"defaultValue": "qwerty",
+	"customFieldType": "/ldc-dcim/cabinet-manager/v1/custom_field_types/1"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9c21571d-d985-4ae7-a485-5a98a8070fd2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="d9796540-0d51-452b-a7b7-7d448feb11eb" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="create device_template" id="86dad740-b2c1-4f91-9c60-9e1b99eec787">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="postDeviceTemplateCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/device_templates" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="create device_template" id="4014be17-b88d-478b-b831-481d0a58d4d8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"modelNumber": "4ru",
+	"manufacturer": "qwerty",
+	"ru": 4,
+	"deviceType": "/ldc-dcim/cabinet-manager/v1/device_types/1",
+	"deviceTemplatePorts": [
+		{
+			"quantity": 1,
+			"portType": "/ldc-dcim/cabinet-manager/v1/port_types/1",
+			"position": "/ldc-dcim/cabinet-manager/v1/positions/1"
+		},
+		{
+			"quantity": 2,
+			"portType": "/ldc-dcim/cabinet-manager/v1/port_types/2",
+			"position": "/ldc-dcim/cabinet-manager/v1/positions/2"
+		}
+	],
+	"deviceTemplateSlots": [
+		{
+			"quantity": 1,
+			"slotType": "/ldc-dcim/cabinet-manager/v1/slot_types/1",
+			"position": "/ldc-dcim/cabinet-manager/v1/positions/1"
+		},
+		{
+			"quantity": 2,
+			"slotType": "/ldc-dcim/cabinet-manager/v1/slot_types/2",
+			"position": "/ldc-dcim/cabinet-manager/v1/positions/2"
+		}
+	],
+	"deviceTemplateCustomFields": [
+		{
+			"value": "foo.bar",
+			"customField": "${create custom_field#Response#$['_links']['self']['href']}"
+		}
+	]
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="cbad4ccf-334d-4594-a20a-4e5af03d6387" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="f1fc4dc6-7688-4d7e-b0e8-45e6531d5d85" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="create cabinet_specification - 4post" id="42cfa442-0fd3-4b43-b847-3af3262dc1a0">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="postCabinetSpecificationCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/cabinet_specifications" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="create cabinet_specification - 4post" id="f9b1d92d-104e-4e14-bc23-746cada74ad4" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"manufacturer": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"rackStandard": "/ldc-dcim/cabinet-manager/v1/rack_standards/2",
+	"posts": 4,
+	"ru": 40,
+	"startNumber": 1,
+	"modelNumber": "4post"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/cabinet_specifications</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7be384e7-ad55-419f-a1b3-72518fae1f9a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="49cb4e6b-ed7c-482e-8a0b-122568f72b41" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

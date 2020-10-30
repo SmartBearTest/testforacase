@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/custom_field_types" path="/ldc-dcim/cabinet-manager/v1/custom_field_types" id="c6721865-5135-4c92-b5fa-89347d82bea3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c6721865-5135-4c92-b5fa-89347d82bea3fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fcustom_field_types</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getCustomFieldTypeCollection" id="caa85ab8-b334-4853-a6b3-3b5778ea1d46" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>id</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>id[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>[ {
+  "name" : "string",
+  "id" : 0,
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="96d8972e-288e-47ae-b348-1a8ad94a53c2" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="name" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="id[]" value=""/>
+        <con:entry key="order[name]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>name</con:entry>
+        <con:entry>order[name]</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>id</con:entry>
+        <con:entry>id[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

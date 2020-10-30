@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/taxonomy/taxonomy/v1/taxon_instances/tree" path="/taxonomy/taxonomy/v1/taxon_instances/tree" id="90fa3cec-7cb8-4baa-ba9b-c39fdcfc9b3b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="90fa3cec-7cb8-4baa-ba9b-c39fdcfc9b3bfileName">%2Ftaxonomy%2Ftaxonomy%2Fv1%2Ftaxon_instances%2Ftree</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="taxon_instance_treeTaxonInstanceCollection" id="fd9f4fa3-37c7-48d6-a691-efa7c7eb0ddf" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>taxon.taxonomy.guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>taxon.taxonomy.guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>taxon.level.guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>taxon.level.guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>taxon.guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>taxon.guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>resource</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>tree_context[direction]</con:name>
+        <con:value>down</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>down</con:default>
+      </con:parameter>
+      <con:parameter>
+        <con:name>tree_context[steps]</con:name>
+        <con:value>0</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>0</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="198b3835-d9d1-4d55-acd4-8e614174678d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="taxon.level.guid[]" value=""/>
+        <con:entry key="resource" value=""/>
+        <con:entry key="taxon.taxonomy.guid[]" value=""/>
+        <con:entry key="taxon.guid[]" value=""/>
+        <con:entry key="guid[]" value=""/>
+        <con:entry key="taxon.guid" value=""/>
+        <con:entry key="tree_context[steps]" value="0"/>
+        <con:entry key="taxon.level.guid" value=""/>
+        <con:entry key="guid" value=""/>
+        <con:entry key="taxon.taxonomy.guid" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="tree_context[direction]" value="down"/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+</con:resource>

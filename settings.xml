@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c9e96309-c622-49de-b6d1-a6fb901b7adc" created="2.5.0" activeEnvironment="qa" name="cabinet-manager" updated="3.4.5" encryptionMode="Not encrypted" resourceRoot="" authProfile="No Authorization" savePropertyValues="false" compositeProjectFormat="1.3" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c9e96309-c622-49de-b6d1-a6fb901b7adcfileName">ldc-dcim-integrationtests</con:setting>
+  </con:settings>
+  <con:vcsConfiguration>
+    <con:vcsName>Git</con:vcsName>
+    <con:repositoryIdentifier/>
+  </con:vcsConfiguration>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:requirements/>
+  <con:properties>
+    <con:property>
+      <con:name>admin_username</con:name>
+      <con:value>ebay-admin</con:value>
+    </con:property>
+    <con:property>
+      <con:name>admin_password</con:name>
+      <con:value>Testing12345</con:value>
+    </con:property>
+    <con:property>
+      <con:name>user_username</con:name>
+      <con:value>ebay-user</con:value>
+    </con:property>
+    <con:property>
+      <con:name>user_password</con:name>
+      <con:value>Testing123</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="add Auth header" target="${= !request.operation.interface.name.equals('keycloak-ext') }">
+    <con:script>if(request.name.contains('[no event]'))
+	return
+
+def token = context.expand( '${login#Response#$.id_token}' )
+if(token == null || token.isEmpty())
+	return
+def token_type = context.expand( '${login#Response#$.token_type}' )
+
+def headers = request.requestHeaders
+headers.put('Authorization', "${token_type} ${token}")
+request.requestHeaders = headers</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="RequestFilter.afterRequest" name="clear Auth header" target="${= !request.operation.interface.name.equals('keycloak-ext') }">
+    <con:script>if(request.name.contains('[no event]'))
+	return
+
+def headers = request.requestHeaders
+if(headers.containsKey('Authorization'))
+{
+	headers.remove('Authorization')
+	request.requestHeaders = headers
+}</con:script>
+  </con:eventHandlers>
+  <con:environment id="f93faef8-6075-4f6c-bf31-7cb12792e811" name="dev">
+    <con:service type="REST" name="ldc-dcim/cabinet-image">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.dev.switch.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="ldc-dcim/cabinet-manager">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.dev.switch.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="taxonomy/taxonomy">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.dev.switch.com</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>admin_username</con:name>
+      <con:value>unknown</con:value>
+    </con:property>
+    <con:property>
+      <con:name>admin_password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>user_username</con:name>
+      <con:value>unknown</con:value>
+    </con:property>
+    <con:property>
+      <con:name>user_password</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:environment id="c4feaa1e-4d00-4b34-a825-d9b9ed84e8b0" name="qa">
+    <con:service type="REST" name="ldc-dcim/cabinet-image">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.qa.switch.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="ldc-dcim/cabinet-manager">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.qa.switch.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="taxonomy/taxonomy">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.qa.switch.com</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>admin_username</con:name>
+      <con:value>admin@cantor.test</con:value>
+    </con:property>
+    <con:property>
+      <con:name>admin_password</con:name>
+      <con:value>Testing123!</con:value>
+    </con:property>
+    <con:property>
+      <con:name>user_username</con:name>
+      <con:value>user@cantor.test</con:value>
+    </con:property>
+    <con:property>
+      <con:name>user_password</con:name>
+      <con:value>Testing123!</con:value>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:environment id="75cab1a2-9a64-4f51-8ead-9f0b99ae67b9" name="int">
+    <con:service type="REST" name="ldc-dcim/cabinet-image">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.int.switch.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="ldc-dcim/cabinet-manager">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.int.switch.com</con:endpoint>
+    </con:service>
+    <con:service type="REST" name="taxonomy/taxonomy">
+      <con:endpoint authProfile="Inherit From Parent" proxyHost="" proxyPort="" proxyUsername="" proxyPassword="">https://api.int.switch.com</con:endpoint>
+    </con:service>
+    <con:property>
+      <con:name>admin_username</con:name>
+      <con:value>unknown</con:value>
+    </con:property>
+    <con:property>
+      <con:name>admin_password</con:name>
+      <con:value/>
+    </con:property>
+    <con:property>
+      <con:name>user_username</con:name>
+      <con:value>unknown</con:value>
+    </con:property>
+    <con:property>
+      <con:name>user_password</con:name>
+      <con:value/>
+    </con:property>
+    <con:databaseConnectionContainer/>
+    <con:jmsConnectionContainer/>
+  </con:environment>
+  <con:authRepository/>
+  <con:environmentSpec>
+    <con:entry environmentId="f93faef8-6075-4f6c-bf31-7cb12792e811">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="c4feaa1e-4d00-4b34-a825-d9b9ed84e8b0">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+    <con:entry environmentId="75cab1a2-9a64-4f51-8ead-9f0b99ae67b9">
+      <con:authProfile>No Authorization</con:authProfile>
+    </con:entry>
+  </con:environmentSpec>
+  <con:tags>
+    <con:tag>
+      <con:id>dfecbbec-65a8-4629-a882-76bb13fdb139</con:id>
+      <con:name>loadtest</con:name>
+    </con:tag>
+    <con:tag>
+      <con:id>855a6b1a-e7d6-4d40-a5cb-aa6ea998bbb8</con:id>
+      <con:name>taxonomy</con:name>
+    </con:tag>
+  </con:tags>
+</con:soapui-project>

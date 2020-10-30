@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/clones/{id}" path="/ldc-dcim/cabinet-manager/v1/clones/{id}" id="6645005a-1ce1-4e14-b36e-8eb357d3bc6d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6645005a-1ce1-4e14-b36e-8eb357d3bc6dfileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fclones%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getCloneItem" id="e9c2bf98-a18e-461b-9787-f3f2024ef829" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "tasks" : [ {
+    "iri" : "string",
+    "failureMessage" : "string",
+    "clonedIri" : "string",
+    "guid" : "string",
+    "status" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "guid" : "string",
+  "startAt" : "2015-07-20T15:49:04-07:00",
+  "endAt" : "2015-07-20T15:49:04-07:00",
+  "status" : "string",
+  "insights" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="86207b9b-0515-48b4-8dd5-975ba0b9a551" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="organization" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="organization[]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

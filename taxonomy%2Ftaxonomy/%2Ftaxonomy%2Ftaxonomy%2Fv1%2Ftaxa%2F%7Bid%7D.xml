@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/taxonomy/taxonomy/v1/taxa/{id}" path="/taxonomy/taxonomy/v1/taxa/{id}" id="6167173e-7a50-42ee-ac7e-d1c39699c8f5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6167173e-7a50-42ee-ac7e-d1c39699c8f5fileName">%2Ftaxonomy%2Ftaxonomy%2Fv1%2Ftaxa%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getTaxonItem" id="d1e6c799-7578-477f-80ef-28433932899c" method="GET">
+    <con:description>Retrieves a Taxon resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "taxonomy" : "/taxonomy/taxonomy/v1/taxonomies/{id}",
+  "level" : "/taxonomy/taxonomy/v1/levels/{id}",
+  "createdBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedBy" : "string",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name" : "string",
+  "description" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="ec122101-afcc-4892-937a-f2d1a48ec5df" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+  <con:method name="putTaxonItem" id="187ccbcc-5f7d-44e3-914c-4a6158d0d6a7" method="PUT">
+    <con:description>Replaces the Taxon resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "level" : "/taxonomy/taxonomy/v1/levels/{id}",
+  "parents" : [ {
+    "weight" : 0,
+    "taxon" : {
+      "level" : "/taxonomy/taxonomy/v1/levels/{id}",
+      "parents" : [ { } ],
+      "name" : "string",
+      "description" : "string"
+    }
+  } ],
+  "name" : "string",
+  "description" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "taxonomy" : "/taxonomy/taxonomy/v1/taxonomies/{id}",
+  "level" : "/taxonomy/taxonomy/v1/levels/{id}",
+  "createdBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedBy" : "string",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name" : "string",
+  "description" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="f4bc760d-72b1-454d-86b0-04216ed31a74" mediaType="application/hal+json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+    <con:request name="Request 2" id="f923de89-3ac9-4185-921d-889fdf8fde69" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "level" : "/taxonomy/taxonomy/v1/levels/{id}",
+  "parents" : [ {
+    "weight" : 0,
+    "taxon" : {
+      "level" : "/taxonomy/taxonomy/v1/levels/{id}",
+      "parents" : [ { } ],
+      "name" : "string",
+      "description" : "string"
+    }
+  } ],
+  "name" : "string",
+  "description" : "string"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+    <con:request name="Request 3" id="83e312e3-ba35-40c9-b3ea-e9f2c945c2b8" mediaType="text/html">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+  <con:method name="deleteTaxonItem" id="29880e6d-1fc4-4cfc-87ce-89a26af482a0" method="DELETE">
+    <con:description>Removes the Taxon resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="efcecf36-1c4d-47d0-8aa9-f096c2a5fb9d" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+</con:resource>

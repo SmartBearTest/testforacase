@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e272dbd0-128e-4416-9085-52d50addc29d" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="non-jpeg TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b649dc21-20df-4fa9-8613-1347226f3917fileName">CRUD-TestCase</con:setting>
+    <con:setting id="e272dbd0-128e-4416-9085-52d50addc29dfileName">non-jpeg-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="getCabinet" id="effde6a4-5732-4b9c-a26e-0b54df8bbc09">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getCabinetCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/cabinets" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="getCabinet" id="99bbf49a-4b22-4740-953d-3d025390124a" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/cabinets</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="eecc4596-cdf1-4d08-8152-c51552f7dcd6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="92f87f83-626c-41f4-b055-6fd15b9862a7" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="internal" value="true"/>
+          <con:entry key="barcodeNumber" value=""/>
+          <con:entry key="order[cabinetSpecification.manufacturer]" value=""/>
+          <con:entry key="order[internal]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="cabinetPeriods.createdAt[strictly_after]" value=""/>
+          <con:entry key="order[cabinetSpecification.height]" value=""/>
+          <con:entry key="cabinetPeriods.cabinetStatus[]" value=""/>
+          <con:entry key="order[cabinetSpecification.interiorHeight]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="createdAt[strictly_after]" value=""/>
+          <con:entry key="search" value=""/>
+          <con:entry key="cabinetTracking.rfGroupCode" value=""/>
+          <con:entry key="order[cabinetOwner.email]" value=""/>
+          <con:entry key="cabinetPeriods.createdAt[before]" value=""/>
+          <con:entry key="exists[reservations]" value=""/>
+          <con:entry key="cabinetOwner.name" value=""/>
+          <con:entry key="cabinetPeriods.createdAt[strictly_before]" value=""/>
+          <con:entry key="serialNumber" value=""/>
+          <con:entry key="order[assetNumber]" value=""/>
+          <con:entry key="cabinetPeriods.modifiedAt[strictly_before]" value=""/>
+          <con:entry key="modifiedAt[strictly_after]" value=""/>
+          <con:entry key="cabinetPeriods.modifiedAt[after]" value=""/>
+          <con:entry key="order[cabinetPeriods.cabinetStatus]" value=""/>
+          <con:entry key="order[cabinetSpecification.interiorWidth]" value=""/>
+          <con:entry key="order[cabinetSpecification.startPosition]" value=""/>
+          <con:entry key="cabinetPeriods.modifiedAt[before]" value=""/>
+          <con:entry key="modifiedAt[strictly_before]" value=""/>
+          <con:entry key="cabinetPeriods.createdAt[after]" value=""/>
+          <con:entry key="name" value=""/>
+          <con:entry key="order[cabinetSpecification.ru]" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+          <con:entry key="order[cabinetSpecification.weightCapacity]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>assetNumber</con:entry>
+          <con:entry>serialNumber</con:entry>
+          <con:entry>barcodeNumber</con:entry>
+          <con:entry>cabinetTracking.rfGroupCode</con:entry>
+          <con:entry>cabinetTracking.rfTagId</con:entry>
+          <con:entry>cabinetTracking.rfTreatmentCode</con:entry>
+          <con:entry>cabinetTracking.rfPosition</con:entry>
+          <con:entry>cabinetOwner.name</con:entry>
+          <con:entry>cabinetOwner.email</con:entry>
+          <con:entry>cabinetPeriods.cabinetStatus</con:entry>
+          <con:entry>cabinetPeriods.cabinetStatus[]</con:entry>
+          <con:entry>internal</con:entry>
+          <con:entry>order[internal]</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[assetNumber]</con:entry>
+          <con:entry>order[serialNumber]</con:entry>
+          <con:entry>order[barcodeNumber]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>cabinetPeriods.createdAt[before]</con:entry>
+          <con:entry>cabinetPeriods.createdAt[strictly_before]</con:entry>
+          <con:entry>cabinetPeriods.createdAt[after]</con:entry>
+          <con:entry>cabinetPeriods.createdAt[strictly_after]</con:entry>
+          <con:entry>cabinetPeriods.modifiedAt[before]</con:entry>
+          <con:entry>cabinetPeriods.modifiedAt[strictly_before]</con:entry>
+          <con:entry>cabinetPeriods.modifiedAt[after]</con:entry>
+          <con:entry>cabinetPeriods.modifiedAt[strictly_after]</con:entry>
+          <con:entry>search</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>order[cabinetPeriods.cabinetStatus]</con:entry>
+          <con:entry>order[cabinetSpecification.manufacturer]</con:entry>
+          <con:entry>order[cabinetSpecification.modelNumber]</con:entry>
+          <con:entry>order[cabinetSpecification.ru]</con:entry>
+          <con:entry>order[cabinetSpecification.posts]</con:entry>
+          <con:entry>order[cabinetSpecification.startPosition]</con:entry>
+          <con:entry>order[cabinetSpecification.width]</con:entry>
+          <con:entry>order[cabinetSpecification.interiorWidth]</con:entry>
+          <con:entry>order[cabinetSpecification.height]</con:entry>
+          <con:entry>order[cabinetSpecification.interiorHeight]</con:entry>
+          <con:entry>order[cabinetSpecification.weight]</con:entry>
+          <con:entry>order[cabinetSpecification.weightCapacity]</con:entry>
+          <con:entry>order[cabinetOwner.name]</con:entry>
+          <con:entry>order[cabinetOwner.email]</con:entry>
+          <con:entry>exists[installations]</con:entry>
+          <con:entry>exists[reservations]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create image" id="0f41d264-a04b-4ed8-a412-6a1d685d6607">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" resourcePath="/ldc-dcim/cabinet-image/v1/cabinet_images" methodName="postCabinetImageCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create image" id="e4fc97de-cb93-473f-b912-2c3f1a5f4a36" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+  "file" : "${= Base64.getEncoder().encodeToString(org.apache.commons.io.FileUtils.readFileToByteArray(new File(context.expand('${projectDir}') + '/data/3124333.gif'))) }",
+  "metadata" : {
+    "cabinet": "${getCabinet#Response#$['_embedded']['item'][0]['_links']['self']['href']}",
+    "location" : "${getCabinet#Response#$['_embedded']['item'][0]['_links']['location']['href']}",
+    "organization": "${getCabinet#Response#$['_embedded']['item'][0]['_links']['organization']['href']}",
+    "angle" : "/ldc-dcim/cabinet-image/v1/angles/1"
+  }
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/cabinet_images</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9b93a462-7208-44fa-b363-3618e5908dba" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>400</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="65035e85-d78e-49be-a28d-a3f198fb2500" name="verify detail">
+          <con:configuration>
+            <path>$.detail</path>
+            <content>'image/gif' is not a supported mime type.</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:tearDownScript/>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>7bd16bdc-ff30-4570-9b50-3443cc5fa15c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

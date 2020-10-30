@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/taxonomy/taxonomy/v1/taxonomies" path="/taxonomy/taxonomy/v1/taxonomies" id="2bcb6d4b-2b48-4180-bef1-cc72fa9cdc7d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2bcb6d4b-2b48-4180-bef1-cc72fa9cdc7dfileName">%2Ftaxonomy%2Ftaxonomy%2Fv1%2Ftaxonomies</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getTaxonomyCollection" id="a28cfe1a-de2a-40fc-b3e1-d58f02c58182" method="GET">
+    <con:description>Retrieves the collection of Taxonomy resources.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "levelSystem" : "/identity/auth/v1/organizations/{id}",
+  "createdBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedBy" : "string",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "name" : "string",
+  "description" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="18291a1d-fea2-4390-a18e-1e62324ec9d1" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+  <con:method name="postTaxonomyCollection" id="edad7e06-b229-43f7-91c9-8d20f042e200" method="POST">
+    <con:description>Creates a Taxonomy resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "levelSystem" : "/identity/auth/v1/organizations/{id}",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name" : "string",
+  "description" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "levelSystem" : "/identity/auth/v1/organizations/{id}",
+  "createdBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedBy" : "string",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "name" : "string",
+  "description" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="42731a50-e0d4-4281-8d4f-b18b10164807" mediaType="application/hal+json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Request 2" id="82fdd6e8-7357-4faf-baf9-3ae99da8d8de" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "levelSystem" : "/identity/auth/v1/organizations/{id}",
+  "guid" : "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+  "name" : "string",
+  "description" : "string"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Request 3" id="fb262fa5-3f9e-41ff-b44f-d22a4725ff76" mediaType="text/html" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

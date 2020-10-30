@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/device_slot_histories" path="/ldc-dcim/cabinet-manager/v1/device_slot_histories" id="986bc6c0-9a6b-4e2b-8972-31d042f66c9b" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="986bc6c0-9a6b-4e2b-8972-31d042f66c9bfileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevice_slot_histories</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getDeviceSlotHistoryCollection" id="bc7b38d3-3d84-4827-ad4a-434c2079304e" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>username</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>action</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>action[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[loggedAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>loggedAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>loggedAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>loggedAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>loggedAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>objectId</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="fe8f16e0-95ec-4318-b843-79b0d4ea62de" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters>
+        <con:entry key="loggedAt[strictly_before]" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="action[]" value=""/>
+        <con:entry key="loggedAt[before]" value=""/>
+        <con:entry key="loggedAt[after]" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="loggedAt[strictly_after]" value=""/>
+        <con:entry key="action" value=""/>
+        <con:entry key="order[loggedAt]" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="objectId" value=""/>
+        <con:entry key="username" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>username</con:entry>
+        <con:entry>action</con:entry>
+        <con:entry>action[]</con:entry>
+        <con:entry>order[loggedAt]</con:entry>
+        <con:entry>loggedAt[before]</con:entry>
+        <con:entry>loggedAt[strictly_before]</con:entry>
+        <con:entry>loggedAt[after]</con:entry>
+        <con:entry>loggedAt[strictly_after]</con:entry>
+        <con:entry>objectId</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/device_event_notes" path="/ldc-dcim/cabinet-manager/v1/device_event_notes" id="c418237e-6277-4113-866e-f75c51364994" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c418237e-6277-4113-866e-f75c51364994fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevice_event_notes</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getDeviceEventNoteCollection" id="91717296-55a7-4637-815c-1bce3cc63af7" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="false">
+        <con:name>order[createdAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[modifiedAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[date]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>date[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>date[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>date[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>date[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>[ {
+  "date" : "2015-07-20T15:49:04-07:00",
+  "description" : "string",
+  "deviceEvent" : "string",
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="a9f811ec-195c-449b-897e-b13600ba49f8" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="createdAt[strictly_before]" value=""/>
+        <con:entry key="createdAt[after]" value=""/>
+        <con:entry key="date[strictly_after]" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="order[date]" value=""/>
+        <con:entry key="guid[]" value=""/>
+        <con:entry key="createdAt[strictly_after]" value=""/>
+        <con:entry key="order[modifiedAt]" value=""/>
+        <con:entry key="date[strictly_before]" value=""/>
+        <con:entry key="createdAt[before]" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="guid" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="order[createdAt]" value=""/>
+        <con:entry key="date[after]" value=""/>
+        <con:entry key="date[before]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>order[createdAt]</con:entry>
+        <con:entry>order[modifiedAt]</con:entry>
+        <con:entry>order[date]</con:entry>
+        <con:entry>date[before]</con:entry>
+        <con:entry>date[strictly_before]</con:entry>
+        <con:entry>date[after]</con:entry>
+        <con:entry>date[strictly_after]</con:entry>
+        <con:entry>createdAt[before]</con:entry>
+        <con:entry>createdAt[strictly_before]</con:entry>
+        <con:entry>createdAt[after]</con:entry>
+        <con:entry>createdAt[strictly_after]</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>guid</con:entry>
+        <con:entry>guid[]</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="postDeviceEventNoteCollection" id="eab1543a-c233-482d-adee-b32c2c204fce" method="POST">
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "date" : "2015-07-20T15:49:04-07:00",
+  "description" : "string",
+  "deviceEvent" : "string",
+  "guid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "date" : "2015-07-20T15:49:04-07:00",
+  "description" : "string",
+  "deviceEvent" : "string",
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="96bc7f94-e5b6-41aa-860b-97594f690c38" mediaType="application/hal+json">
+      <con:description>Creates a DeviceEventNote resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

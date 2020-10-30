@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/cabinets" path="/ldc-dcim/cabinet-manager/v1/cabinets" id="06e7fd62-66eb-4a45-9dde-a12e0dc4a23d" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="06e7fd62-66eb-4a45-9dde-a12e0dc4a23dfileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fcabinets</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getCabinetCollection" id="a2441626-07f4-408c-8f54-4eecb9c82a5b" method="GET">
+    <con:description>Retrieves the collection of Cabinet resources.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="false">
+        <con:name>name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>assetNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>serialNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>barcodeNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetTracking.rfGroupCode</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetTracking.rfTagId</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetTracking.rfTreatmentCode</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetTracking.rfPosition</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetOwner.name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetOwner.email</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.cabinetStatus</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.cabinetStatus[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>internal</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[internal]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[assetNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[serialNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>order[barcodeNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>createdAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>modifiedAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.createdAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.createdAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.createdAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.createdAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.modifiedAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.modifiedAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.modifiedAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>cabinetPeriods.modifiedAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description xsi:nil="true"/>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>search</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>Filter Using OR by properties</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[createdAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[modifiedAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetPeriods.cabinetStatus]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.manufacturer]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.modelNumber]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.ru]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.posts]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.startPosition]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.width]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.interiorWidth]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.height]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.interiorHeight]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.weight]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetSpecification.weightCapacity]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetOwner.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[cabinetOwner.email]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>exists[installations]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>exists[reservations]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>[ {
+  "internal" : true,
+  "name" : "string",
+  "cabinetOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : {
+    "manufacturer" : "string",
+    "modelNumber" : "string",
+    "startNumber" : 0,
+    "startPosition" : "Top",
+    "ru" : 0,
+    "posts" : 0,
+    "interiorWidth" : 1.5,
+    "interiorHeight" : 1.5,
+    "weight" : 1.5,
+    "weightCapacity" : 1.5,
+    "rackStandard" : "/ldc-dcim/cabinet-manager/v1/rack_standards/{id}",
+    "description" : "string",
+    "guid" : "string",
+    "width" : 1.5,
+    "height" : 1.5,
+    "depth" : 1.5
+  },
+  "installations" : [ { } ],
+  "reservations" : [ { } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "location" : "/ldc-api/location/v1/cabinets/{id}"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="6d6481d2-1363-4bfa-8f74-32b5d651166f" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="barcodeNumber" value=""/>
+        <con:entry key="order[internal]" value=""/>
+        <con:entry key="order[cabinetSpecification.weight]" value=""/>
+        <con:entry key="order[cabinetOwner.name]" value=""/>
+        <con:entry key="cabinetTracking.rfTagId" value=""/>
+        <con:entry key="order[cabinetSpecification.modelNumber]" value=""/>
+        <con:entry key="cabinetPeriods.cabinetStatus[]" value=""/>
+        <con:entry key="createdAt[strictly_after]" value=""/>
+        <con:entry key="assetNumber" value=""/>
+        <con:entry key="modifiedAt[after]" value=""/>
+        <con:entry key="order[cabinetOwner.email]" value=""/>
+        <con:entry key="exists[reservations]" value=""/>
+        <con:entry key="modifiedAt[before]" value=""/>
+        <con:entry key="order[cabinetSpecification.width]" value=""/>
+        <con:entry key="cabinetOwner.name" value=""/>
+        <con:entry key="cabinetPeriods.createdAt[strictly_before]" value=""/>
+        <con:entry key="cabinetTracking.rfPosition" value=""/>
+        <con:entry key="serialNumber" value=""/>
+        <con:entry key="order[assetNumber]" value=""/>
+        <con:entry key="cabinetPeriods.modifiedAt[strictly_before]" value=""/>
+        <con:entry key="modifiedAt[strictly_after]" value=""/>
+        <con:entry key="order[cabinetPeriods.cabinetStatus]" value=""/>
+        <con:entry key="order[cabinetSpecification.startPosition]" value=""/>
+        <con:entry key="modifiedAt[strictly_before]" value=""/>
+        <con:entry key="cabinetPeriods.createdAt[after]" value=""/>
+        <con:entry key="createdAt[before]" value=""/>
+        <con:entry key="name" value=""/>
+        <con:entry key="guid" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="createdAt[strictly_before]" value=""/>
+        <con:entry key="internal" value=""/>
+        <con:entry key="order[cabinetSpecification.manufacturer]" value=""/>
+        <con:entry key="createdAt[after]" value=""/>
+        <con:entry key="cabinetPeriods.createdAt[strictly_after]" value=""/>
+        <con:entry key="order[cabinetSpecification.height]" value=""/>
+        <con:entry key="order[cabinetSpecification.interiorHeight]" value=""/>
+        <con:entry key="guid[]" value=""/>
+        <con:entry key="order[modifiedAt]" value=""/>
+        <con:entry key="search" value=""/>
+        <con:entry key="cabinetTracking.rfGroupCode" value=""/>
+        <con:entry key="cabinetPeriods.createdAt[before]" value=""/>
+        <con:entry key="cabinetPeriods.modifiedAt[strictly_after]" value=""/>
+        <con:entry key="order[createdAt]" value=""/>
+        <con:entry key="order[cabinetSpecification.posts]" value=""/>
+        <con:entry key="order[barcodeNumber]" value=""/>
+        <con:entry key="cabinetPeriods.cabinetStatus" value=""/>
+        <con:entry key="cabinetTracking.rfTreatmentCode" value=""/>
+        <con:entry key="order[serialNumber]" value=""/>
+        <con:entry key="cabinetPeriods.modifiedAt[after]" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="order[cabinetSpecification.interiorWidth]" value=""/>
+        <con:entry key="exists[installations]" value=""/>
+        <con:entry key="cabinetPeriods.modifiedAt[before]" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="order[cabinetSpecification.ru]" value=""/>
+        <con:entry key="order[cabinetSpecification.weightCapacity]" value=""/>
+        <con:entry key="order[name]" value=""/>
+        <con:entry key="cabinetOwner.email" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>name</con:entry>
+        <con:entry>assetNumber</con:entry>
+        <con:entry>serialNumber</con:entry>
+        <con:entry>barcodeNumber</con:entry>
+        <con:entry>cabinetTracking.rfGroupCode</con:entry>
+        <con:entry>cabinetTracking.rfTagId</con:entry>
+        <con:entry>cabinetTracking.rfTreatmentCode</con:entry>
+        <con:entry>cabinetTracking.rfPosition</con:entry>
+        <con:entry>cabinetOwner.name</con:entry>
+        <con:entry>cabinetOwner.email</con:entry>
+        <con:entry>cabinetPeriods.cabinetStatus</con:entry>
+        <con:entry>cabinetPeriods.cabinetStatus[]</con:entry>
+        <con:entry>internal</con:entry>
+        <con:entry>order[internal]</con:entry>
+        <con:entry>order[name]</con:entry>
+        <con:entry>order[assetNumber]</con:entry>
+        <con:entry>order[serialNumber]</con:entry>
+        <con:entry>order[barcodeNumber]</con:entry>
+        <con:entry>createdAt[before]</con:entry>
+        <con:entry>createdAt[strictly_before]</con:entry>
+        <con:entry>createdAt[after]</con:entry>
+        <con:entry>createdAt[strictly_after]</con:entry>
+        <con:entry>modifiedAt[before]</con:entry>
+        <con:entry>modifiedAt[strictly_before]</con:entry>
+        <con:entry>modifiedAt[after]</con:entry>
+        <con:entry>modifiedAt[strictly_after]</con:entry>
+        <con:entry>cabinetPeriods.createdAt[before]</con:entry>
+        <con:entry>cabinetPeriods.createdAt[strictly_before]</con:entry>
+        <con:entry>cabinetPeriods.createdAt[after]</con:entry>
+        <con:entry>cabinetPeriods.createdAt[strictly_after]</con:entry>
+        <con:entry>cabinetPeriods.modifiedAt[before]</con:entry>
+        <con:entry>cabinetPeriods.modifiedAt[strictly_before]</con:entry>
+        <con:entry>cabinetPeriods.modifiedAt[after]</con:entry>
+        <con:entry>cabinetPeriods.modifiedAt[strictly_after]</con:entry>
+        <con:entry>search</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>order[createdAt]</con:entry>
+        <con:entry>order[modifiedAt]</con:entry>
+        <con:entry>order[cabinetPeriods.cabinetStatus]</con:entry>
+        <con:entry>order[cabinetSpecification.manufacturer]</con:entry>
+        <con:entry>order[cabinetSpecification.modelNumber]</con:entry>
+        <con:entry>order[cabinetSpecification.ru]</con:entry>
+        <con:entry>order[cabinetSpecification.posts]</con:entry>
+        <con:entry>order[cabinetSpecification.startPosition]</con:entry>
+        <con:entry>order[cabinetSpecification.width]</con:entry>
+        <con:entry>order[cabinetSpecification.interiorWidth]</con:entry>
+        <con:entry>order[cabinetSpecification.height]</con:entry>
+        <con:entry>order[cabinetSpecification.interiorHeight]</con:entry>
+        <con:entry>order[cabinetSpecification.weight]</con:entry>
+        <con:entry>order[cabinetSpecification.weightCapacity]</con:entry>
+        <con:entry>order[cabinetOwner.name]</con:entry>
+        <con:entry>order[cabinetOwner.email]</con:entry>
+        <con:entry>exists[installations]</con:entry>
+        <con:entry>exists[reservations]</con:entry>
+        <con:entry>guid</con:entry>
+        <con:entry>guid[]</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="postCabinetCollection" id="d6122fb6-1cf0-4b65-a1c1-641c83db8797" method="POST">
+    <con:description>Creates a Cabinet resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "cabinetOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : { },
+  "installations" : [ { } ],
+  "reservations" : [ { } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "guid" : "string",
+  "location" : "/ldc-api/location/v1/cabinets/{id}",
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "internal" : true,
+  "name" : "string",
+  "cabinetOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : {
+    "manufacturer" : "string",
+    "modelNumber" : "string",
+    "startNumber" : 0,
+    "startPosition" : "Top",
+    "ru" : 0,
+    "posts" : 0,
+    "interiorWidth" : 1.5,
+    "interiorHeight" : 1.5,
+    "weight" : 1.5,
+    "weightCapacity" : 1.5,
+    "rackStandard" : "/ldc-dcim/cabinet-manager/v1/rack_standards/{id}",
+    "description" : "string",
+    "guid" : "string",
+    "width" : 1.5,
+    "height" : 1.5,
+    "depth" : 1.5,
+    "scope" : "string"
+  },
+  "installations" : [ {
+    "installationStatus" : "/ldc-dcim/cabinet-manager/v1/installation_statuses/{id}",
+    "device" : {
+      "name" : "string",
+      "serialNumber" : "string",
+      "assetNumber" : "string",
+      "barcodeNumber" : "string",
+      "serviceTag" : "string",
+      "modelNumber" : "string",
+      "manufacturer" : "string",
+      "weight" : 1.5,
+      "notes" : "string",
+      "inputVoltage" : 1.5,
+      "outputVoltage" : 1.5,
+      "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+      "deviceStatus" : "string",
+      "guid" : "string",
+      "width" : 1.5,
+      "height" : 1.5,
+      "depth" : 1.5,
+      "ru" : 0,
+      "posts" : 4
+    },
+    "ruPosition" : 0,
+    "position" : "Front",
+    "guid" : "string"
+  } ],
+  "reservations" : [ {
+    "notes" : "string",
+    "ruPosition" : 0,
+    "position" : "Front",
+    "guid" : "string",
+    "ru" : 0,
+    "posts" : 0,
+    "displayName" : "string"
+  } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "location" : "/ldc-api/location/v1/cabinets/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="9144e414-4891-4ed7-87a0-b831a5224120" mediaType="application/hal+json" postQueryString="false">
+      <con:description>Creates a Cabinet resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+    <con:request name="Request 2" id="7718c050-affc-4b72-b0fb-ffcdb0b25f5c" mediaType="application/json" postQueryString="false">
+      <con:description>Creates a Cabinet resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "name" : "string",
+  "cabinetOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : { },
+  "installations" : [ { } ],
+  "reservations" : [ { } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "guid" : "string",
+  "location" : "/ldc-api/location/v1/cabinets/{id}",
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+    <con:request name="Request 3" id="da085152-47e3-47d0-bbdf-a4288790e9f9" mediaType="text/html" postQueryString="false">
+      <con:description>Creates a Cabinet resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+      <con:parameterOrder/>
+    </con:request>
+  </con:method>
+</con:resource>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/devices/{id}/device_phases" path="/ldc-dcim/cabinet-manager/v1/devices/{id}/device_phases" id="72d9fa06-8c64-4d93-b358-730b84d3380e" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="72d9fa06-8c64-4d93-b358-730b84d3380efileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevices%2F%7Bid%7D%2Fdevice_phases</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="api_devices_device_phases_get_subresource" id="4dc2cb3c-3712-478c-b1fa-4e33a1d7cd63" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>order[date]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[createdAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[modifiedAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>modifiedAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>modifiedAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>modifiedAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>modifiedAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>[ {
+  "date" : "2015-07-20T15:49:04-07:00",
+  "device" : "string",
+  "phaseType" : "/ldc-dcim/cabinet-manager/v1/phase_types/{id}",
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="d8753fd0-1fb6-44c9-875b-1253de041947" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="createdAt[strictly_before]" value=""/>
+        <con:entry key="createdAt[after]" value=""/>
+        <con:entry key="modifiedAt[strictly_after]" value=""/>
+        <con:entry key="date[strictly_after]" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="order[date]" value=""/>
+        <con:entry key="guid[]" value=""/>
+        <con:entry key="createdAt[strictly_after]" value=""/>
+        <con:entry key="order[modifiedAt]" value=""/>
+        <con:entry key="date[strictly_before]" value=""/>
+        <con:entry key="modifiedAt[strictly_before]" value=""/>
+        <con:entry key="modifiedAt[after]" value=""/>
+        <con:entry key="createdAt[before]" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="modifiedAt[before]" value=""/>
+        <con:entry key="guid" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="order[createdAt]" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="date[after]" value=""/>
+        <con:entry key="date[before]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>order[date]</con:entry>
+        <con:entry>order[createdAt]</con:entry>
+        <con:entry>order[modifiedAt]</con:entry>
+        <con:entry>date[before]</con:entry>
+        <con:entry>date[strictly_before]</con:entry>
+        <con:entry>date[after]</con:entry>
+        <con:entry>date[strictly_after]</con:entry>
+        <con:entry>createdAt[before]</con:entry>
+        <con:entry>createdAt[strictly_before]</con:entry>
+        <con:entry>createdAt[after]</con:entry>
+        <con:entry>createdAt[strictly_after]</con:entry>
+        <con:entry>modifiedAt[before]</con:entry>
+        <con:entry>modifiedAt[strictly_before]</con:entry>
+        <con:entry>modifiedAt[after]</con:entry>
+        <con:entry>modifiedAt[strictly_after]</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>guid</con:entry>
+        <con:entry>guid[]</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

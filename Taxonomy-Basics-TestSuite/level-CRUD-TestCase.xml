@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="3cd63313-db62-49c3-99ac-2c6c39ba3df1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="level CRUD TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3cd63313-db62-49c3-99ac-2c6c39ba3df1fileName">level-CRUD-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get levelSystems" id="acab300b-270f-44d8-a2ed-284cac73a38b">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/level_systems" methodName="getLevelSystemCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get levelSystems" id="21e95502-557e-460b-9be3-55cf58ec6d6f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="88b348ef-80a1-484f-85c2-b112253f7f30" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="dc0a875d-2bf7-47d1-8d65-62a1d0b499b1" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="createdAt[strictly_after]" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="order[modifiedBy]" value=""/>
+          <con:entry key="modifiedAt[after]" value=""/>
+          <con:entry key="order[createdBy]" value=""/>
+          <con:entry key="name" value=""/>
+          <con:entry key="modifiedAt[before]" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>name</con:entry>
+          <con:entry>description</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[createdBy]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>order[modifiedBy]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create level" id="dcf0ce4d-f2f6-4159-a6d3-9abc162caff0">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/levels" methodName="postLevelCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create level" id="7fb916a3-1a06-48f6-bd55-66b9ecc7e521" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+   "name" : "${=testCase.testSuite.name} / ${=testCase.name}",
+   "description" : "${= org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(100) }",
+   
+   "levelSystem" : "${get levelSystems#Response#$['_links']['item'][0]['href']}"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="77f15c17-e747-489b-b9b6-b20828633dca" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="aa76320c-c961-4894-8049-401817b415af" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Read level" id="70668917-fa86-469d-a0da-ad37b194903c">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/levels/{id}" methodName="getLevelItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Read level" id="906257bf-8948-4f7d-a6a0-28dfa4e4a122" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems/0143b15c-f0cb-450f-b910-9979d2dece13</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="fce95336-0c15-483e-9611-46c198b78f9c" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="c31316e4-b582-4566-927f-bdab7ca70361" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>${=testCase.testSuite.name} / ${=testCase.name}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create level#Response#$.guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get levels of levelSystem" id="dce586e6-58cd-42ba-8db5-e400a57487ff" disabled="true">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/level_systems/{id}/levels" methodName="api_level_systems_levels_get_subresource" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get levels of levelSystem" id="d8668d22-7f7a-4945-8f53-6a9e4a049ca1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems/78241f8b-6f4e-422d-9739-251f14e9f04e/levels</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="fd63948d-5e9b-4289-b480-257cdf079917" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple Contains" id="a03f97a4-20fb-44d5-9e72-36237e787a86" name="Contains">
+          <con:configuration>
+            <token>levels\/${Create level#Response#$.guid}</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${get levelSystems#Response#$['_embedded']['item'][0]['guid']}"/>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update level" id="87a5c128-7c64-4392-a831-251dc9e4dd9c">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/levels/{id}" methodName="putLevelItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Update level" id="546770b6-b661-4742-aaac-a8b3799b02a0" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+   "name" : "${=testCase.testSuite.name} / ${=testCase.name} / updated"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems/0143b15c-f0cb-450f-b910-9979d2dece13</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9fd3617e-1d86-4cab-88e2-8747ebc42f5b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="f7d8cbba-6535-4421-b211-f9c70e547d17" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>${=testCase.testSuite.name} / ${=testCase.name} / updated</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create level#Response#$.guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete level" id="cca0b052-0403-45f5-9f02-e6f45cacf30e">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/levels/{id}" methodName="deleteLevelItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete level" id="38a57ce8-8d1c-45c8-ba80-9963768e865b" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems/0143b15c-f0cb-450f-b910-9979d2dece13</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c78e7aa5-faf4-4d26-af2e-7c65585a1bed" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create level#Response#$.guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="verify delete level" id="c7b4fa64-771a-4062-93f8-69b2828916c3">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/levels" methodName="getLevelCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="verify delete level" id="21e95502-557e-460b-9be3-55cf58ec6d6f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="88b348ef-80a1-484f-85c2-b112253f7f30" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple NotContains" id="c9e0aaa2-0540-4604-af6e-f9c80f906293" name="Not Contains">
+          <con:configuration>
+            <token>levels\/${Create level#Response#$.guid}</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>acab300b-270f-44d8-a2ed-284cac73a38b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

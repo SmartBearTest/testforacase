@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="d5f709d0-49da-461b-9b2a-d150cc04745c" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="reports TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d5f709d0-49da-461b-9b2a-d150cc04745cfileName">reports-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="report cabinet_specification_rus" id="499907f2-19a0-45b3-9826-95c49430ef8f">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/cabinet_specification_rus" methodName="getCabinetSpecificationRuTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report cabinet_specification_rus" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/cabinet_specification_rus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="itemsperpage" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report cabinet_rus" id="dfbbd363-c4fd-460b-a9c3-f45e1909f269">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_cabinet_rus" methodName="getCabinetRuTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report cabinet_rus" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_cabinet_rus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report cabinets" id="da933a4b-eb9e-4056-af8d-1ee4209ea2aa">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_cabinets" methodName="getCabinetTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report cabinets" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_cabinets</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report connections_by_type" id="3b449348-ff24-47b0-ab6a-845541b037d6">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_connections_by_type" methodName="getConnectionTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report connections_by_type" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_connections_by_type</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>group</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report device_installations" id="1f7d0529-a7db-4df8-a7da-7df5a8703138">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_device_installations" methodName="getDeviceInstallationCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report device_installations" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_device_installations</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report device_port_connection" id="dc9dd42b-6367-49be-b44f-9e78267d8aae">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_device_port_connection" methodName="getDevicePortConnectionCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report device_port_connection" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_device_installations</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="group" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report devices_by_lifecycle" id="66cc012e-186b-478f-8082-583480db4bd5">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_lifecycle" methodName="getDeviceTotalLifecycleCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report devices_by_lifecycle" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_lifecycle</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="group" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>group</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report devices_by_status" id="18bfa20a-feee-44bc-8b7a-8c25bb0901f7">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_status" methodName="getDeviceTotalStatusCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report devices_by_status" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_status</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="group" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>group</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report devices_by_status_type" id="dd2dab7b-3eb7-42f0-bfa1-58835232e388">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_status_type" methodName="getDeviceTotalTypeStatusCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report devices_by_status_type" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_status_type</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="group" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>group</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report devices_by_type" id="840680e9-7ad7-4a7a-bd08-bd928890c8a2">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_type" methodName="getDeviceTotalTypeCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report devices_by_type" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_devices_by_type</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="group" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>group</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report installation_rus_by_status" id="742a08bc-f31e-476b-9e46-448243e3c669">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_installation_rus_by_status" methodName="getInstallationRuStatusTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report installation_rus_by_status" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_installation_rus_by_status</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report installation_rus_by_type" id="49ebef78-3fe9-4b77-ae51-9c144cc08555">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_installation_rus_by_type" methodName="getInstallationRuTypeTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report installation_rus_by_type" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_installation_rus_by_type</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report installation_rus_by_type_status" id="5ba02695-d726-442d-9c6a-8a48e936d834">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_installation_rus_by_type_status" methodName="getInstallationRuTypeStatusTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report installation_rus_by_type_status" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_installation_rus_by_type_status</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="report reservation_rus" id="90201953-bc76-47d5-910e-2690b86d8003">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/reports/total_reservation_rus" methodName="getReservationRuTotalCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="report reservation_rus" id="74a540db-3725-4277-a0ec-3ce6031e5706" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/reports/total_reservation_rus</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="722144ca-6893-48b7-b123-8209435919d7" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>dc9dd42b-6367-49be-b44f-9e78267d8aae</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

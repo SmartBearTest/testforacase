@@ -1,0 +1,5 @@
+clone-cabinet-TestCase.xml
+migrate-cabinet-keep-orig-TestCase.xml
+migrate-cabinet-delete-orig-TestCase.xml
+migrate-cabinet-there-and-back-TestCase.xml
+migrate-cabinet-keep-connections-TestCase.xml

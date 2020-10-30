@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="39a6dcac-01a3-4d50-9fde-626f33026a29" name="Taxonomy Basics TestSuite" xmlns:con="http://eviware.com/soapui/config">
+  <con:description>https://supernap.atlassian.net/browse/LDCIM-1085</con:description>
+  <con:settings>
+    <con:setting id="39a6dcac-01a3-4d50-9fde-626f33026a29fileName">Taxonomy-Basics-TestSuite</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>855a6b1a-e7d6-4d40-a5cb-aa6ea998bbb8</con:tagId>
+</con:testSuite>

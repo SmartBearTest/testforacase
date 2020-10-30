@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/reports/total_reservation_rus" path="/ldc-dcim/cabinet-manager/v1/reports/total_reservation_rus" id="1dd1f60e-d858-4b06-a83d-9884d9883cb9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1dd1f60e-d858-4b06-a83d-9884d9883cb9fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Freports%2Ftotal_reservation_rus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getReservationRuTotalCollection" id="57bb330b-96b3-46a4-95a8-e203afae6904" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="099e2000-1ea6-40dc-994e-7e02a46c1dc7" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+      </con:parameters>
+    </con:request>
+  </con:method>
+</con:resource>

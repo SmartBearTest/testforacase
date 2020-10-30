@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="f171a5a6-9c11-42d8-8e7e-9c6c932a9511" name="Smoke TestSuite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f171a5a6-9c11-42d8-8e7e-9c6c932a9511fileName">Smoke-TestSuite</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>PARALLELL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

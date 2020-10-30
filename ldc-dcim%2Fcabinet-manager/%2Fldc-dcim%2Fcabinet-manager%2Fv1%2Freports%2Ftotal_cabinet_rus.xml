@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/reports/total_cabinet_rus" path="/ldc-dcim/cabinet-manager/v1/reports/total_cabinet_rus" id="310ce287-d647-4ae5-8bb7-b80d1ee1ee18" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="310ce287-d647-4ae5-8bb7-b80d1ee1ee18fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Freports%2Ftotal_cabinet_rus</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getCabinetRuTotalCollection" id="617161cd-3cea-4421-a282-5050516c348c" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="false">
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter required="false">
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:type xmlns:xs="http://www.w3.org/2001/XMLSchema">xs:string</con:type>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "totalRus" : 0,
+  "totalInternalRus" : 0,
+  "totalExternalRus" : 0
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="d805a42b-93b6-470d-9fa7-a7a4fa2f8d13" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

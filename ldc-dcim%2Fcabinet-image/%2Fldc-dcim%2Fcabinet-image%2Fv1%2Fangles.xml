@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-image/v1/angles" path="/ldc-dcim/cabinet-image/v1/angles" id="01cf2078-e5a5-4e02-a903-a32aaccf7953" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="01cf2078-e5a5-4e02-a903-a32aaccf7953fileName">%2Fldc-dcim%2Fcabinet-image%2Fv1%2Fangles</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="getCollectionAngleCollection" id="743f2af7-d040-4880-8024-f50e3b2d2577" method="GET">
+    <con:description>Retrieves the collection of Angle resources.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:dataType>integer</con:dataType>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent>[ {
+  "id" : 0,
+  "name" : "string",
+  "displayName" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="ea53fc13-034d-4400-af87-f6971cffa609" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/angles</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:jmsPropertyConfig/>
+      <con:parameters>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

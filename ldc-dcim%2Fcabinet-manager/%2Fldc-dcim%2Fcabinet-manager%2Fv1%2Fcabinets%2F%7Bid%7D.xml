@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/cabinets/{id}" path="/ldc-dcim/cabinet-manager/v1/cabinets/{id}" id="5cc6eb7e-15d0-4eb6-8f22-293a82f55b58" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5cc6eb7e-15d0-4eb6-8f22-293a82f55b58fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fcabinets%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getCabinetItem" id="11337aa2-ec44-4ab4-ae40-135ea56181ca" method="GET">
+    <con:description>Retrieves a Cabinet resource.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "internal" : true,
+  "name" : "string",
+  "cabinetOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : {
+    "manufacturer" : "string",
+    "modelNumber" : "string",
+    "startNumber" : 0,
+    "startPosition" : "Top",
+    "ru" : 0,
+    "posts" : 0,
+    "interiorWidth" : 1.5,
+    "interiorHeight" : 1.5,
+    "weight" : 1.5,
+    "weightCapacity" : 1.5,
+    "rackStandard" : "/ldc-dcim/cabinet-manager/v1/rack_standards/{id}",
+    "description" : "string",
+    "guid" : "string",
+    "width" : 1.5,
+    "height" : 1.5,
+    "depth" : 1.5,
+    "scope" : "string"
+  },
+  "installations" : [ {
+    "installationStatus" : "/ldc-dcim/cabinet-manager/v1/installation_statuses/{id}",
+    "device" : {
+      "name" : "string",
+      "serialNumber" : "string",
+      "assetNumber" : "string",
+      "barcodeNumber" : "string",
+      "serviceTag" : "string",
+      "modelNumber" : "string",
+      "manufacturer" : "string",
+      "weight" : 1.5,
+      "notes" : "string",
+      "inputVoltage" : 1.5,
+      "outputVoltage" : 1.5,
+      "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+      "deviceStatus" : "string",
+      "guid" : "string",
+      "width" : 1.5,
+      "height" : 1.5,
+      "depth" : 1.5,
+      "ru" : 0,
+      "posts" : 4
+    },
+    "ruPosition" : 0,
+    "position" : "Front",
+    "guid" : "string"
+  } ],
+  "reservations" : [ {
+    "notes" : "string",
+    "ruPosition" : 0,
+    "position" : "Front",
+    "guid" : "string",
+    "ru" : 0,
+    "posts" : 0,
+    "displayName" : "string"
+  } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "location" : "/ldc-api/location/v1/cabinets/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="09ce9a0f-e70c-407e-97cf-a67cf577380a" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="organization" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="organization[]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="putCabinetItem" id="5bc75de0-4296-4098-8da0-d6a5f9698d90" method="PUT">
+    <con:description>Replaces the Cabinet resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "cabinetOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : { },
+  "installations" : [ { } ],
+  "reservations" : [ { } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "guid" : "string",
+  "location" : "/ldc-api/location/v1/cabinets/{id}",
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "internal" : true,
+  "name" : "string",
+  "cabinetOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : {
+    "manufacturer" : "string",
+    "modelNumber" : "string",
+    "startNumber" : 0,
+    "startPosition" : "Top",
+    "ru" : 0,
+    "posts" : 0,
+    "interiorWidth" : 1.5,
+    "interiorHeight" : 1.5,
+    "weight" : 1.5,
+    "weightCapacity" : 1.5,
+    "rackStandard" : "/ldc-dcim/cabinet-manager/v1/rack_standards/{id}",
+    "description" : "string",
+    "guid" : "string",
+    "width" : 1.5,
+    "height" : 1.5,
+    "depth" : 1.5,
+    "scope" : "string"
+  },
+  "installations" : [ {
+    "installationStatus" : "/ldc-dcim/cabinet-manager/v1/installation_statuses/{id}",
+    "device" : {
+      "name" : "string",
+      "serialNumber" : "string",
+      "assetNumber" : "string",
+      "barcodeNumber" : "string",
+      "serviceTag" : "string",
+      "modelNumber" : "string",
+      "manufacturer" : "string",
+      "weight" : 1.5,
+      "notes" : "string",
+      "inputVoltage" : 1.5,
+      "outputVoltage" : 1.5,
+      "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+      "deviceStatus" : "string",
+      "guid" : "string",
+      "width" : 1.5,
+      "height" : 1.5,
+      "depth" : 1.5,
+      "ru" : 0,
+      "posts" : 4
+    },
+    "ruPosition" : 0,
+    "position" : "Front",
+    "guid" : "string"
+  } ],
+  "reservations" : [ {
+    "notes" : "string",
+    "ruPosition" : 0,
+    "position" : "Front",
+    "guid" : "string",
+    "ru" : 0,
+    "posts" : 0,
+    "displayName" : "string"
+  } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "location" : "/ldc-api/location/v1/cabinets/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="5766c4df-6989-412c-9034-fe2d74ef7254" mediaType="application/hal+json">
+      <con:description>Replaces the Cabinet resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 2" id="c42e969e-eb09-47c3-bf7c-87034cb68a68" mediaType="application/json">
+      <con:description>Replaces the Cabinet resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "name" : "string",
+  "cabinetOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "cabinetTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "assetNumber" : "string",
+  "serialNumber" : "string",
+  "barcodeNumber" : "string",
+  "notes" : "string",
+  "cabinetSpecification" : { },
+  "installations" : [ { } ],
+  "reservations" : [ { } ],
+  "cabinetPeriods" : [ {
+    "startDate" : "2015-07-20T15:49:04-07:00",
+    "endDate" : "2015-07-20T15:49:04-07:00",
+    "cabinetStatus" : "string",
+    "guid" : "string",
+    "reservation" : "string"
+  } ],
+  "cabinetCustomFields" : [ {
+    "customField" : "/ldc-dcim/cabinet-manager/v1/custom_fields/{guid}",
+    "guid" : "string",
+    "value" : "string"
+  } ],
+  "guid" : "string",
+  "location" : "/ldc-api/location/v1/cabinets/{id}",
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 3" id="489e6428-46b1-440f-a7ed-2a379f4aeeaf" mediaType="text/html">
+      <con:description>Replaces the Cabinet resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="deleteCabinetItem" id="ef5039eb-e92b-40e9-9cfc-8175c5b8941b" method="DELETE">
+    <con:description>Removes the Cabinet resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="554de523-f0f6-4852-a20f-355fb9a37347" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

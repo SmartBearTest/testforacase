@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="510b1a12-a281-47c1-adc8-8be8ff6bb609" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="delete all" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="510b1a12-a281-47c1-adc8-8be8ff6bb609fileName">delete-all</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get metadata" id="842ffdfa-4885-4d1c-be1e-3a98bb5498f1">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="getCollectionMetadataCollection" resourcePath="/ldc-dcim/cabinet-image/v1/metadata" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get metadata" id="4fea69ff-430e-4e35-8b71-80269d5fac8e" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/metadata</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d90b413c-0e60-4a32-8b8e-da68c015b56d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="cabinet.id" value=""/>
+          <con:entry key="order[modifiedAt]" value=""/>
+          <con:entry key="location.id[]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="cabinet.id[]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="guid[]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>angle.displayName</con:entry>
+          <con:entry>angle.displayName[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>location.id</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>cabinet.id</con:entry>
+          <con:entry>location.id[]</con:entry>
+          <con:entry>cabinet.id[]</con:entry>
+          <con:entry>pagination</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasource" name="extract ids" id="6fbcf8eb-aa4b-44aa-82c9-7275ad11f31f">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="JSON">
+        <con:configuration>
+          <sourceStep>get metadata</sourceStep>
+          <sourceProperty>Response</sourceProperty>
+          <rowPath>$._embedded.item</rowPath>
+          <columnPath>guid</columnPath>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>guid</con:property>
+      <con:startRow/>
+      <con:endRow/>
+      <con:recordsPerIteration>1</con:recordsPerIteration>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:gotoLoopOnEmpty>true</con:gotoLoopOnEmpty>
+      <con:trimValues>false</con:trimValues>
+      <con:entitizeValues>false</con:entitizeValues>
+      <con:restartOnRun>true</con:restartOnRun>
+      <con:expandProperties>false</con:expandProperties>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="delete image" id="2ee10bf5-2420-4020-8459-13315bb0b831">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="deleteCabinetImageItem" resourcePath="/ldc-dcim/cabinet-image/v1/cabinet_images/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="delete image" id="40c16785-34a1-4e3d-ac69-218cfa00c4c3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/cabinet_images/2f925303-76b3-422c-bbde-f23eb81bab2a</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5bf0373e-2438-409d-b76c-424a7ff4efbc" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="id" value="${extract ids#guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="next id" id="b348e968-5ea8-441b-945e-1c87748aebe2">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>extract ids</dataSourceStep>
+      <targetStep>delete image</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="goto" name="next metadata page" id="501d2c51-0e8a-4d5b-86a0-249d9988cd3d">
+    <con:settings/>
+    <con:config xsi:type="con:GotoStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:condition>
+        <con:name>more pages</con:name>
+        <con:type>XPATH</con:type>
+        <con:expression>${get metadata#Response#$.totalItems} > ${get metadata#Response#$.itemsPerPage}</con:expression>
+        <con:targetStep>get metadata</con:targetStep>
+      </con:condition>
+    </con:config>
+  </con:testStep>
+  <con:tearDownScript/>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

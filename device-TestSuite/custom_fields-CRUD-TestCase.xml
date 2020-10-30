@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="4f879bb6-5d2a-4968-9c83-ca0806639908" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="custom_fields CRUD TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4f879bb6-5d2a-4968-9c83-ca0806639908fileName">custom_fields-CRUD-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get custom_field_types" id="1db0e1de-f6da-46f0-9613-517841429b3d">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getCustomFieldTypeCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_field_types" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get custom_field_types" id="3ea674de-6bb1-4793-8aa8-d274d26be813" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_field_types</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="64dc63fd-375e-41fb-a614-d2ad933f2043" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="8c495419-da80-4f8d-a6bc-2e9d1f9f2f65" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>id</con:entry>
+          <con:entry>id[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create custom_field" id="09f96b07-e70d-474e-b779-5f1d59eaabbe">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="postCustomFieldCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create custom_field" id="69d1b0df-778b-422d-84b4-4a32143f44b9" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"defaultValue": "qwerty",
+	"customFieldType": "${get custom_field_types#Response#$['_embedded']['item'][0]['_links']['self']['href']}"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9c21571d-d985-4ae7-a485-5a98a8070fd2" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="d9796540-0d51-452b-a7b7-7d448feb11eb" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Read custom_field" id="548152c6-290d-41f4-8aaa-a7b858e285e3">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getCustomFieldItem" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Read custom_field" id="01be9990-e3a4-4018-8210-a3d94b422c18" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="685b312b-d7e9-47cf-ad50-e9048991e420" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="1b2eb5dd-2cde-4a63-afbd-f7f19097f16f" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>Automation: ${=testCase.testSuite.name} / ${=testCase.name}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="organization" value=""/>
+          <con:entry key="id" value="${Create custom_field#Response#$.guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update custom_field" id="98683763-1c3d-40d6-a81a-6769a72bbb17">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="putCustomFieldItem" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Update custom_field" id="01be9990-e3a4-4018-8210-a3d94b422c18" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name} / update"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="685b312b-d7e9-47cf-ad50-e9048991e420" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="1b2eb5dd-2cde-4a63-afbd-f7f19097f16f" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>Automation: ${=testCase.testSuite.name} / ${=testCase.name} / update</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create custom_field#Response#$.guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete custom_field" id="e06ac1c7-a2fd-4190-a5e3-c5f8aab948da">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="deleteCustomFieldItem" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete custom_field" id="01be9990-e3a4-4018-8210-a3d94b422c18" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="685b312b-d7e9-47cf-ad50-e9048991e420" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create custom_field#Response#$.guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="verify delete custom_field" id="2d5406af-597a-4759-b8a5-a80dfb741d9b">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getCustomFieldCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="verify delete custom_field" id="01be9990-e3a4-4018-8210-a3d94b422c18" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields/2</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="685b312b-d7e9-47cf-ad50-e9048991e420" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple NotContains" id="abbee993-fe19-44d2-8293-a87e668ef21d" name="Not Contains guid">
+          <con:configuration>
+            <token>${Create custom_field#Response#$.guid}</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="customFieldType.name" value=""/>
+          <con:entry key="createdAt[strictly_before]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="defaultValue" value=""/>
+          <con:entry key="organization[]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="order[modifiedAt]" value=""/>
+          <con:entry key="modifiedAt[strictly_before]" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="order[customFieldType.name]" value=""/>
+          <con:entry key="modifiedAt[before]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="page" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>defaultValue</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[defaultValue]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>customFieldType.name</con:entry>
+          <con:entry>order[customFieldType.id]</con:entry>
+          <con:entry>order[customFieldType.name]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:tearDownScript/>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

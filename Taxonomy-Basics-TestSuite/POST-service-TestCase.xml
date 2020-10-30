@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="bf875641-60b0-46af-8801-08b73d6d1011" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="POST service TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description/>
+  <con:settings>
+    <con:setting id="bf875641-60b0-46af-8801-08b73d6d1011fileName">POST-service-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="POST as user" id="2b27eeea-c6ab-4948-8c73-26e5c8059699">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/services" methodName="postServiceCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="POST as user" id="0d8f36d4-c528-4bdb-9d3a-476f5f1a754f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+  "service" : {
+    "service" : { },
+    "versions" : [ {
+      "name" : "string",
+      "description" : "string",
+      "fields" : [ {
+        "name" : "string"
+      } ]
+    } ],
+    "taxonTypes" : [ {
+      "key" : "string",
+      "resource" : "string",
+      "identifierName" : "string",
+      "versionName" : "string",
+      "maps" : [ {
+        "mapTo" : "string",
+        "fieldName" : "string"
+      } ]
+    } ]
+  },
+  "versions" : [ {
+    "name" : "string",
+    "description" : "string",
+    "fields" : [ {
+      "name" : "string"
+    } ]
+  } ],
+  "taxonTypes" : [ {
+    "key" : "string",
+    "resource" : "string",
+    "identifierName" : "string",
+    "versionName" : "string",
+    "maps" : [ {
+      "mapTo" : "string",
+      "fieldName" : "string"
+    } ]
+  } ]
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/services</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="53fa13a6-8017-427c-b1eb-da1e760f6fe4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>403</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="POST as admin [no event]" id="ab5ce869-2a1d-4f15-9696-fe6c7b16212d">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/services" methodName="postServiceCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="POST as admin [no event]" id="0d8f36d4-c528-4bdb-9d3a-476f5f1a754f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="${login - admin#Response#$.token_type} ${login - admin#Response#$.id_token}" xmlns="http://eviware.com/soapui/config"/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+  "service" : {
+    "service" : { },
+    "versions" : [ {
+      "name" : "string",
+      "description" : "string",
+      "fields" : [ {
+        "name" : "string"
+      } ]
+    } ],
+    "taxonTypes" : [ {
+      "key" : "string",
+      "resource" : "string",
+      "identifierName" : "string",
+      "versionName" : "string",
+      "maps" : [ {
+        "mapTo" : "string",
+        "fieldName" : "string"
+      } ]
+    } ]
+  },
+  "versions" : [ {
+    "name" : "string",
+    "description" : "string",
+    "fields" : [ {
+      "name" : "string"
+    } ]
+  } ],
+  "taxonTypes" : [ {
+    "key" : "string",
+    "resource" : "string",
+    "identifierName" : "string",
+    "versionName" : "string",
+    "maps" : [ {
+      "mapTo" : "string",
+      "fieldName" : "string"
+    } ]
+  } ]
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/services</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="53fa13a6-8017-427c-b1eb-da1e760f6fe4" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>400</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

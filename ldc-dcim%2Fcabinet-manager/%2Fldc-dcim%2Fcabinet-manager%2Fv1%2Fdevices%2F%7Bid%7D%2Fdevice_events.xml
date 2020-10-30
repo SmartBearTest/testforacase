@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/devices/{id}/device_events" path="/ldc-dcim/cabinet-manager/v1/devices/{id}/device_events" id="f4d7ce6f-b4de-47dd-8476-2daaabbb7045" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f4d7ce6f-b4de-47dd-8476-2daaabbb7045fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevices%2F%7Bid%7D%2Fdevice_events</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="api_devices_device_events_get_subresource" id="c0cbf120-e5aa-4461-8db7-b666547dddac" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>title</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[date]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[createdAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[modifiedAt]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>date[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[strictly_before]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>createdAt[strictly_after]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.serialNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.serialNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.assetNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.assetNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.barcodeNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.barcodeNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.serviceTag</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.serviceTag[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.modelNumber</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.modelNumber[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.manufacturer</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.manufacturer[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.deviceType</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.deviceType[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.deviceStatus</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>device.deviceStatus[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[title]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.width]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.height]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.depth]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.ru]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.posts]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.weight]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.inputVoltage]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[device.outputVoltage]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>page</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+        <con:description>The collection page number</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>itemsperpage</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+        <con:description>The number of items per page</con:description>
+      </con:parameter>
+      <con:parameter>
+        <con:name>eventType.guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>eventType.guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>eventType.name</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>order[eventType.name]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>guid[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>[ {
+  "date" : "2015-07-20T15:49:04-07:00",
+  "title" : "string",
+  "device" : "string",
+  "deviceEventNotes" : [ {
+    "date" : "2015-07-20T15:49:04-07:00",
+    "description" : "string",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string"
+} ]</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="e55c4af1-6225-4221-a74e-2bc4b78c2d3f" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="order[title]" value=""/>
+        <con:entry key="device.modelNumber[]" value=""/>
+        <con:entry key="order[device.width]" value=""/>
+        <con:entry key="createdAt[strictly_after]" value=""/>
+        <con:entry key="order[device.name]" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="date[before]" value=""/>
+        <con:entry key="date[after]" value=""/>
+        <con:entry key="device.assetNumber[]" value=""/>
+        <con:entry key="eventType.guid[]" value=""/>
+        <con:entry key="device.deviceType" value=""/>
+        <con:entry key="device.assetNumber" value=""/>
+        <con:entry key="device.manufacturer" value=""/>
+        <con:entry key="device.serviceTag[]" value=""/>
+        <con:entry key="order[date]" value=""/>
+        <con:entry key="device.serviceTag" value=""/>
+        <con:entry key="order[device.height]" value=""/>
+        <con:entry key="date[strictly_before]" value=""/>
+        <con:entry key="createdAt[before]" value=""/>
+        <con:entry key="guid" value=""/>
+        <con:entry key="page" value=""/>
+        <con:entry key="itemsperpage" value=""/>
+        <con:entry key="order[eventType.name]" value=""/>
+        <con:entry key="order[device.ru]" value=""/>
+        <con:entry key="createdAt[strictly_before]" value=""/>
+        <con:entry key="createdAt[after]" value=""/>
+        <con:entry key="device.barcodeNumber" value=""/>
+        <con:entry key="order[device.depth]" value=""/>
+        <con:entry key="device.deviceStatus" value=""/>
+        <con:entry key="title" value=""/>
+        <con:entry key="device.manufacturer[]" value=""/>
+        <con:entry key="guid[]" value=""/>
+        <con:entry key="order[modifiedAt]" value=""/>
+        <con:entry key="order[device.inputVoltage]" value=""/>
+        <con:entry key="device.serialNumber" value=""/>
+        <con:entry key="order[createdAt]" value=""/>
+        <con:entry key="device.deviceType[]" value=""/>
+        <con:entry key="device.deviceStatus[]" value=""/>
+        <con:entry key="order[device.posts]" value=""/>
+        <con:entry key="order[device.outputVoltage]" value=""/>
+        <con:entry key="date[strictly_after]" value=""/>
+        <con:entry key="organization[]" value=""/>
+        <con:entry key="device.serialNumber[]" value=""/>
+        <con:entry key="order[device.weight]" value=""/>
+        <con:entry key="eventType.guid" value=""/>
+        <con:entry key="device.name" value=""/>
+        <con:entry key="organization" value=""/>
+        <con:entry key="eventType.name" value=""/>
+        <con:entry key="device.modelNumber" value=""/>
+        <con:entry key="device.barcodeNumber[]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>title</con:entry>
+        <con:entry>order[date]</con:entry>
+        <con:entry>order[createdAt]</con:entry>
+        <con:entry>order[modifiedAt]</con:entry>
+        <con:entry>date[before]</con:entry>
+        <con:entry>date[strictly_before]</con:entry>
+        <con:entry>date[after]</con:entry>
+        <con:entry>date[strictly_after]</con:entry>
+        <con:entry>createdAt[before]</con:entry>
+        <con:entry>createdAt[strictly_before]</con:entry>
+        <con:entry>createdAt[after]</con:entry>
+        <con:entry>createdAt[strictly_after]</con:entry>
+        <con:entry>device.name</con:entry>
+        <con:entry>device.serialNumber</con:entry>
+        <con:entry>device.serialNumber[]</con:entry>
+        <con:entry>device.assetNumber</con:entry>
+        <con:entry>device.assetNumber[]</con:entry>
+        <con:entry>device.barcodeNumber</con:entry>
+        <con:entry>device.barcodeNumber[]</con:entry>
+        <con:entry>device.serviceTag</con:entry>
+        <con:entry>device.serviceTag[]</con:entry>
+        <con:entry>device.modelNumber</con:entry>
+        <con:entry>device.modelNumber[]</con:entry>
+        <con:entry>device.manufacturer</con:entry>
+        <con:entry>device.manufacturer[]</con:entry>
+        <con:entry>device.deviceType</con:entry>
+        <con:entry>device.deviceType[]</con:entry>
+        <con:entry>device.deviceStatus</con:entry>
+        <con:entry>device.deviceStatus[]</con:entry>
+        <con:entry>order[title]</con:entry>
+        <con:entry>order[device.name]</con:entry>
+        <con:entry>order[device.width]</con:entry>
+        <con:entry>order[device.height]</con:entry>
+        <con:entry>order[device.depth]</con:entry>
+        <con:entry>order[device.ru]</con:entry>
+        <con:entry>order[device.posts]</con:entry>
+        <con:entry>order[device.weight]</con:entry>
+        <con:entry>order[device.inputVoltage]</con:entry>
+        <con:entry>order[device.outputVoltage]</con:entry>
+        <con:entry>page</con:entry>
+        <con:entry>itemsperpage</con:entry>
+        <con:entry>eventType.guid</con:entry>
+        <con:entry>eventType.guid[]</con:entry>
+        <con:entry>eventType.name</con:entry>
+        <con:entry>order[eventType.name]</con:entry>
+        <con:entry>guid</con:entry>
+        <con:entry>guid[]</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

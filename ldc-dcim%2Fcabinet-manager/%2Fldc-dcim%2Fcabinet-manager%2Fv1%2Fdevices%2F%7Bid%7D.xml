@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/devices/{id}" path="/ldc-dcim/cabinet-manager/v1/devices/{id}" id="8d244e6c-d1fd-428e-b15f-eed6cef94eab" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8d244e6c-d1fd-428e-b15f-eed6cef94eabfileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevices%2F%7Bid%7D</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+      <con:description xsi:nil="true"/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="getDeviceItem" id="b95b07c7-8578-4aa1-abcc-3e6dc62e3835" method="GET">
+    <con:description>Retrieves a Device resource.</con:description>
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="4545677f-b7f3-471c-92c6-d9763dfdedc4" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="organization" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="organization[]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="putDeviceItem" id="3632bcbd-ea58-42c6-8da8-cb573036e708" method="PUT">
+    <con:description>Replaces the Device resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ { } ],
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ {
+    "createdBy" : "string",
+    "modifiedBy" : "string",
+    "createdAt" : "2015-07-20T15:49:04-07:00",
+    "modifiedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+    "deactivatedBy" : "string"
+  } ],
+  "createdBy" : "string",
+  "modifiedBy" : "string",
+  "createdAt" : "2015-07-20T15:49:04-07:00",
+  "modifiedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedAt" : "2015-07-20T15:49:04-07:00",
+  "deactivatedBy" : "string",
+  "guid" : "string",
+  "organization" : "/identity/auth/v1/organizations/{id}",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="REQUEST" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status/>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="dc0c3bf7-776b-45cc-ac15-69a5d61bea7c" mediaType="application/hal+json" postQueryString="false">
+      <con:description>Replaces the Device resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 2" id="35802486-e451-4069-8123-c5229cf2df29" mediaType="application/json" postQueryString="false">
+      <con:description>Replaces the Device resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ { } ],
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+    <con:request name="Request 3" id="38f2a304-d3e6-492b-8aa8-7591cf1da2cd" mediaType="text/html" postQueryString="false">
+      <con:description>Replaces the Device resource.</con:description>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+  <con:method name="deleteDeviceItem" id="a173b6e7-79b5-46fe-8eb4-cf6b7363d644" method="DELETE">
+    <con:description>Removes the Device resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>204</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="67217f88-ee7a-4a47-a426-5ef904d7c3cb" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="id" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

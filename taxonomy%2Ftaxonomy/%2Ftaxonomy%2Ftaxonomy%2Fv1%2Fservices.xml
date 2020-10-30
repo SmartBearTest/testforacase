@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/taxonomy/taxonomy/v1/services" path="/taxonomy/taxonomy/v1/services" id="405fae75-7d19-42e1-96db-497929435457" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="405fae75-7d19-42e1-96db-497929435457fileName">%2Ftaxonomy%2Ftaxonomy%2Fv1%2Fservices</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="postServiceCollection" id="072c709f-5f01-44f0-b01e-737398d20f40" method="POST">
+    <con:description>Creates a Service resource.</con:description>
+    <con:settings/>
+    <con:parameters/>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+      <con:sampleContent>{
+  "service" : {
+    "service" : { },
+    "versions" : [ {
+      "name" : "string",
+      "description" : "string",
+      "fields" : [ {
+        "name" : "string"
+      } ]
+    } ],
+    "taxonTypes" : [ {
+      "key" : "string",
+      "resource" : "string",
+      "identifierName" : "string",
+      "versionName" : "string",
+      "maps" : [ {
+        "mapTo" : "string",
+        "fieldName" : "string"
+      } ]
+    } ]
+  },
+  "versions" : [ {
+    "name" : "string",
+    "description" : "string",
+    "fields" : [ {
+      "name" : "string"
+    } ]
+  } ],
+  "taxonTypes" : [ {
+    "key" : "string",
+    "resource" : "string",
+    "identifierName" : "string",
+    "versionName" : "string",
+    "maps" : [ {
+      "mapTo" : "string",
+      "fieldName" : "string"
+    } ]
+  } ]
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+      <con:sampleContent/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent>{
+  "name" : "string",
+  "baseUrl" : "string",
+  "itemsPerPage" : "string",
+  "version" : "string"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>400</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>text/html</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:request name="Request 1" id="2b81978d-ea4a-4d56-9c53-cafbc0c829d0" mediaType="application/hal+json">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Request 2" id="0d8f36d4-c528-4bdb-9d3a-476f5f1a754f" mediaType="application/json" postQueryString="false">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request>{
+  "service" : {
+    "service" : { },
+    "versions" : [ {
+      "name" : "string",
+      "description" : "string",
+      "fields" : [ {
+        "name" : "string"
+      } ]
+    } ],
+    "taxonTypes" : [ {
+      "key" : "string",
+      "resource" : "string",
+      "identifierName" : "string",
+      "versionName" : "string",
+      "maps" : [ {
+        "mapTo" : "string",
+        "fieldName" : "string"
+      } ]
+    } ]
+  },
+  "versions" : [ {
+    "name" : "string",
+    "description" : "string",
+    "fields" : [ {
+      "name" : "string"
+    } ]
+  } ],
+  "taxonTypes" : [ {
+    "key" : "string",
+    "resource" : "string",
+    "identifierName" : "string",
+    "versionName" : "string",
+    "maps" : [ {
+      "mapTo" : "string",
+      "fieldName" : "string"
+    } ]
+  } ]
+}</con:request>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters/>
+    </con:request>
+    <con:request name="Request 3" id="06a383bf-5337-4347-9fd0-04cda65f569b" mediaType="text/html">
+      <con:settings/>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:parameters/>
+    </con:request>
+  </con:method>
+</con:resource>

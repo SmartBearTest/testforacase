@@ -1,0 +1,7 @@
+custom_fields-CRUD-TestCase.xml
+device_template-CRUD-TestCase.xml
+device_template-payload-TestCase.xml
+device-CRUD-TestCase.xml
+device_status-CRUD-TestCase.xml
+update-group-of-devices-TestCase.xml
+events-TestCase.xml

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="596f15a7-df4f-4f76-bc09-86e5396efb4e" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="image filters TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="596f15a7-df4f-4f76-bc09-86e5396efb4efileName">image-filters-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get all" id="ca39cd0f-ccb8-426b-88ab-769a25455044">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="getCollectionMetadataCollection" resourcePath="/ldc-dcim/cabinet-image/v1/metadata" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get all" id="1c0a9fcb-ee11-4957-ad0d-7d3871be2b81" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/metadata/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1b90e764-e688-4676-b91e-946708461086" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="order[modifiedAt]" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="cabinet.id[]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="angle.displayName[]" value=""/>
+          <con:entry key="location.id" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>angle.displayName</con:entry>
+          <con:entry>angle.displayName[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>location.id</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>cabinet.id</con:entry>
+          <con:entry>location.id[]</con:entry>
+          <con:entry>cabinet.id[]</con:entry>
+          <con:entry>pagination</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get by id" id="580070fc-8673-4136-bb81-c2cbf8906f97">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="getCollectionMetadataCollection" resourcePath="/ldc-dcim/cabinet-image/v1/metadata" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get by id" id="1c0a9fcb-ee11-4957-ad0d-7d3871be2b81" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/metadata/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1b90e764-e688-4676-b91e-946708461086" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="location.id[]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="angle.displayName" value=""/>
+          <con:entry key="guid[]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>angle.displayName</con:entry>
+          <con:entry>angle.displayName[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>location.id</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>cabinet.id</con:entry>
+          <con:entry>location.id[]</con:entry>
+          <con:entry>cabinet.id[]</con:entry>
+          <con:entry>pagination</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get by cabinet_id" id="aef0c3d0-a1fc-4ae5-bbbb-35094809b24f">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="getCollectionMetadataCollection" resourcePath="/ldc-dcim/cabinet-image/v1/metadata" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get by cabinet_id" id="1c0a9fcb-ee11-4957-ad0d-7d3871be2b81" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/metadata/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1b90e764-e688-4676-b91e-946708461086" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="location.id[]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="cabinet.id[]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="angle.displayName" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="location.id" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>angle.displayName</con:entry>
+          <con:entry>angle.displayName[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>location.id</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>cabinet.id</con:entry>
+          <con:entry>location.id[]</con:entry>
+          <con:entry>cabinet.id[]</con:entry>
+          <con:entry>pagination</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get by angle" id="240bb47b-0e2d-489e-b01e-cb35e3cf7925">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="getCollectionMetadataCollection" resourcePath="/ldc-dcim/cabinet-image/v1/metadata" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get by angle" id="1c0a9fcb-ee11-4957-ad0d-7d3871be2b81" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/metadata/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1b90e764-e688-4676-b91e-946708461086" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="location.id[]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="angle.displayName[]" value=""/>
+          <con:entry key="cabinet.id[]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="angle.displayName" value="FRONT"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>angle.displayName</con:entry>
+          <con:entry>angle.displayName[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>location.id</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>cabinet.id</con:entry>
+          <con:entry>location.id[]</con:entry>
+          <con:entry>cabinet.id[]</con:entry>
+          <con:entry>pagination</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get by date" id="a318e387-3af5-4c95-9417-9d8d424448a3">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-image" methodName="getCollectionMetadataCollection" resourcePath="/ldc-dcim/cabinet-image/v1/metadata" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get by date" id="1c0a9fcb-ee11-4957-ad0d-7d3871be2b81" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-image/v1/metadata/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="1b90e764-e688-4676-b91e-946708461086" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:parameters>
+          <con:entry key="cabinet.id" value=""/>
+          <con:entry key="order[modifiedAt]" value=""/>
+          <con:entry key="createdAt[before]" value="${get all#Response#$['_embedded']['item'][0]['createdAt']}"/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="cabinet.id[]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="angle.displayName" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="createdAt[strictly_after]" value=""/>
+          <con:entry key="location.id" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>angle.displayName</con:entry>
+          <con:entry>angle.displayName[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>location.id</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>cabinet.id</con:entry>
+          <con:entry>location.id[]</con:entry>
+          <con:entry>cabinet.id[]</con:entry>
+          <con:entry>pagination</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:tearDownScript/>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

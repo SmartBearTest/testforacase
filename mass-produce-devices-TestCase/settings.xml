@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="64bbefbc-04c2-4c73-9755-9a38dea1f171" name="mass produce devices TestCase" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="64bbefbc-04c2-4c73-9755-9a38dea1f171fileName">mass-produce-devices-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>PARALLELL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:tagId>dfecbbec-65a8-4629-a882-76bb13fdb139</con:tagId>
+</con:testSuite>

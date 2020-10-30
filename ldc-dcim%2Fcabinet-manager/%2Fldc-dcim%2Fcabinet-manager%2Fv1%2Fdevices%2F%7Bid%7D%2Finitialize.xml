@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="/ldc-dcim/cabinet-manager/v1/devices/{id}/initialize" path="/ldc-dcim/cabinet-manager/v1/devices/{id}/initialize" id="32863c2d-7d0b-427d-b9f6-26b2602d1e89" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="32863c2d-7d0b-427d-b9f6-26b2602d1e89fileName">%2Fldc-dcim%2Fcabinet-manager%2Fv1%2Fdevices%2F%7Bid%7D%2Finitialize</con:setting>
+  </con:settings>
+  <con:parameters>
+    <con:parameter required="true">
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="get_device_initializationDeviceTemplateItem" id="daf12247-cf7c-4e77-aa63-85c317f5946b" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>organization</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+      <con:parameter>
+        <con:name>organization[]</con:name>
+        <con:value/>
+        <con:style>QUERY</con:style>
+        <con:default/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent>{
+  "name" : "string",
+  "serialNumber" : "string",
+  "assetNumber" : "string",
+  "barcodeNumber" : "string",
+  "serviceTag" : "string",
+  "modelNumber" : "string",
+  "manufacturer" : "string",
+  "weight" : 1.5,
+  "notes" : "string",
+  "inputVoltage" : 1.5,
+  "outputVoltage" : 1.5,
+  "deviceType" : "/ldc-dcim/cabinet-manager/v1/device_types/{id}",
+  "deviceStatus" : "string",
+  "deviceTracking" : {
+    "guid" : "string",
+    "rfGroupCode" : "string",
+    "rfTagId" : "string",
+    "rfTreatmentCode" : "string",
+    "rfPosition" : "string"
+  },
+  "deviceOwner" : {
+    "guid" : "string",
+    "name" : "string",
+    "email" : "string"
+  },
+  "devicePorts" : [ {
+    "portType" : "/ldc-dcim/cabinet-manager/v1/port_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceSlots" : [ {
+    "slotType" : "/ldc-dcim/cabinet-manager/v1/slot_types/{id}",
+    "guid" : "string",
+    "number" : 0,
+    "notes" : "string",
+    "position" : "/ldc-dcim/cabinet-manager/v1/positions/{id}"
+  } ],
+  "deviceCustomFields" : [ { } ],
+  "guid" : "string",
+  "width" : 1.5,
+  "height" : 1.5,
+  "depth" : 1.5,
+  "ru" : 0,
+  "posts" : 4,
+  "organization" : "/identity/auth/v1/organizations/{id}"
+}</con:sampleContent>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/hal+json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>application/json</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:representation type="RESPONSE" id="">
+      <con:mediaType>text/html</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:description xsi:nil="true"/>
+      <con:sampleContent xsi:nil="true"/>
+    </con:representation>
+    <con:request name="Request 1" id="95c81930-c579-46fe-b4da-302abf8a7839" mediaType="application/json">
+      <con:description xsi:nil="true"/>
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://api.qa.switch.com</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates/a/template</con:originalUri>
+      <con:credentials>
+        <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="organization" value=""/>
+        <con:entry key="id" value=""/>
+        <con:entry key="organization[]" value=""/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>id</con:entry>
+        <con:entry>organization</con:entry>
+        <con:entry>organization[]</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

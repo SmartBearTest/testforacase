@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="47d1ce6f-b469-4419-82f8-77b8ce130a6f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="taxon CRUD TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:description/>
+  <con:settings>
+    <con:setting id="47d1ce6f-b469-4419-82f8-77b8ce130a6ffileName">taxon-CRUD-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get levels" id="0c2ac737-eb49-46bb-a072-3fea012fb63a">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/levels" methodName="getLevelCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get levels" id="21e95502-557e-460b-9be3-55cf58ec6d6f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="88b348ef-80a1-484f-85c2-b112253f7f30" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="dc0a875d-2bf7-47d1-8d65-62a1d0b499b1" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get taxonomies" id="5ce0c41a-0e8d-4144-95de-363e1eac969c">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/taxonomies" methodName="getTaxonomyCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get taxonomies" id="21e95502-557e-460b-9be3-55cf58ec6d6f" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/level_systems</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="88b348ef-80a1-484f-85c2-b112253f7f30" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="dc0a875d-2bf7-47d1-8d65-62a1d0b499b1" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create taxon" id="ac1104fe-36ea-4ca5-8158-5eb46e925ad8">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/taxa" methodName="postTaxonCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create taxon" id="82fdd6e8-7357-4faf-baf9-3ae99da8d8de" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+   "name" : "${=testCase.testSuite.name} / ${=testCase.name}",
+   "description" : "${= org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(100) }",
+   
+   "level" : "${get levels#Response#$['_links']['item'][0]['href']}",
+   "taxonomy" : "${get taxonomies#Response#$['_links']['item'][0]['href']}"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/taxonomies</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d2be5761-35e4-478e-851e-ce9ec599c90a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="1826ff6b-a85c-40a9-9222-b163aa0db757" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Read taxon" id="d2263f85-9d6b-48eb-b909-d074bfa56f9b">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/taxa/{id}" methodName="getTaxonItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Read taxon" id="32fa636c-3386-4762-9c43-37241596f889" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/taxonomies/f3105c92-1998-4c90-a1cd-be56d3cf8b6e</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="300fd302-1393-4c06-a480-eeeaf41cb555" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="0b869c9f-d03d-4789-a562-b584336cd728" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>${=testCase.testSuite.name} / ${=testCase.name}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create taxon#Response#$.guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update taxon" id="fb4df7d5-5ac4-4a01-b52c-023a763a5401">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/taxa/{id}" methodName="putTaxonItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Update taxon" id="6e720153-249b-4c84-ae3c-690a03fa30dc" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+   "name" : "${=testCase.testSuite.name} / ${=testCase.name} / update"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/taxonomies/be7f4d84-d19e-495b-a3e4-c4edbcbdd1c4</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f5c0e517-4822-40e5-80f8-6a0e20611f39" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="a9cdf004-6d62-40a9-90bb-7f87fe85e4a0" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>${=testCase.testSuite.name} / ${=testCase.name} / update</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create taxon#Response#$.guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete taxonomy" id="311e09f5-a988-465b-baf1-566f458956e7">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/taxa/{id}" methodName="deleteTaxonItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete taxonomy" id="0b69819c-951b-4f1d-b476-bca3bf709da6" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/taxonomies/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f74a1854-9c7f-4c1e-9ba4-56eb1321b8d5" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create taxon#Response#$.guid}"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="verify delete taxon" id="0754d2d1-cdd8-4e43-86ef-5b3b59fae2d0">
+    <con:settings/>
+    <con:config service="taxonomy/taxonomy" resourcePath="/taxonomy/taxonomy/v1/taxa" methodName="getTaxonCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="verify delete taxon" id="18291a1d-fea2-4390-a18e-1e62324ec9d1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/taxonomy/taxonomy/v1/taxonomies</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="cbd69efc-5fc2-4ba7-830a-680cf0b77b26" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple NotContains" id="ddcbfde1-d846-4387-ae56-d34e66aaaa99" name="Not Contains">
+          <con:configuration>
+            <token>taxa\/${Create taxon#Response#$.guid}</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="taxonomy.guid[]" value=""/>
+          <con:entry key="resource" value=""/>
+          <con:entry key="taxonomy.guid" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>taxonomy.guid</con:entry>
+          <con:entry>taxonomy.guid[]</con:entry>
+          <con:entry>level.guid</con:entry>
+          <con:entry>level.guid[]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>resource</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>5ce0c41a-0e8d-4144-95de-363e1eac969c</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

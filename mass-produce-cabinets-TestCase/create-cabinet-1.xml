@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="af6e4769-b774-41e2-949f-b21a3463ac70" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="create cabinet 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cbe37488-f93a-4755-a9f1-e5e4fea6bf37fileName">cabinet-2post-TestCase</con:setting>
+    <con:setting id="8ce96c21-dfed-455f-a7dc-f6a0e5316b51fileName">cabinet-4post-DataLoad</con:setting>
+    <con:setting id="cf651615-ac49-40dc-8b05-a9745016f27ffileName">create-cabinet-TestCase0</con:setting>
+    <con:setting id="af6e4769-b774-41e2-949f-b21a3463ac70fileName">create-cabinet-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get cabinet_specification" id="dd5a6f7f-18ee-40b4-8e74-79bbd7ff6493">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getCabinetSpecificationCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/cabinet_specifications" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get cabinet_specification" id="f9b1d92d-104e-4e14-bc23-746cada74ad4" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"manufacturer": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"rackStandard": "/ldc-dcim/cabinet-manager/v1/rack_standards/2",
+	"posts": 4,
+	"ru": 40,
+	"startNumber": 1,
+	"modelNumber": "4post"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/cabinet_specifications</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="7be384e7-ad55-419f-a1b3-72518fae1f9a" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="3433565a-d682-4758-87ef-272c14192fbf" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="weightCapacity" value=""/>
+          <con:entry key="startNumber" value=""/>
+          <con:entry key="ru" value=""/>
+          <con:entry key="posts" value=""/>
+          <con:entry key="startNumber[]" value=""/>
+          <con:entry key="weight[]" value=""/>
+          <con:entry key="height[]" value=""/>
+          <con:entry key="rackStandard.ruHeight" value=""/>
+          <con:entry key="search" value=""/>
+          <con:entry key="order[width]" value=""/>
+          <con:entry key="scope" value=""/>
+          <con:entry key="startPosition[]" value=""/>
+          <con:entry key="weightCapacity[]" value=""/>
+          <con:entry key="scope[]" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+          <con:entry key="modelNumber[]" value=""/>
+          <con:entry key="height" value=""/>
+          <con:entry key="order[ru]" value=""/>
+          <con:entry key="interiorHeight[]" value=""/>
+          <con:entry key="order[modelNumber]" value=""/>
+          <con:entry key="organization[]" value=""/>
+          <con:entry key="order[interiorWidth]" value=""/>
+          <con:entry key="order[weight]" value=""/>
+          <con:entry key="interiorWidth" value=""/>
+          <con:entry key="depth" value=""/>
+          <con:entry key="organization" value=""/>
+          <con:entry key="modelNumber" value="4post"/>
+          <con:entry key="rackStandard.ruWidth[]" value=""/>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>manufacturer</con:entry>
+          <con:entry>manufacturer[]</con:entry>
+          <con:entry>modelNumber</con:entry>
+          <con:entry>modelNumber[]</con:entry>
+          <con:entry>startPosition</con:entry>
+          <con:entry>startPosition[]</con:entry>
+          <con:entry>width</con:entry>
+          <con:entry>width[]</con:entry>
+          <con:entry>height</con:entry>
+          <con:entry>height[]</con:entry>
+          <con:entry>depth</con:entry>
+          <con:entry>depth[]</con:entry>
+          <con:entry>startNumber</con:entry>
+          <con:entry>startNumber[]</con:entry>
+          <con:entry>ru</con:entry>
+          <con:entry>ru[]</con:entry>
+          <con:entry>posts</con:entry>
+          <con:entry>posts[]</con:entry>
+          <con:entry>interiorWidth</con:entry>
+          <con:entry>interiorWidth[]</con:entry>
+          <con:entry>interiorHeight</con:entry>
+          <con:entry>interiorHeight[]</con:entry>
+          <con:entry>weight</con:entry>
+          <con:entry>weight[]</con:entry>
+          <con:entry>weightCapacity</con:entry>
+          <con:entry>weightCapacity[]</con:entry>
+          <con:entry>rackStandard.ruWidth</con:entry>
+          <con:entry>rackStandard.ruWidth[]</con:entry>
+          <con:entry>rackStandard.ruHeight</con:entry>
+          <con:entry>rackStandard.ruHeight[]</con:entry>
+          <con:entry>order[manufacturer]</con:entry>
+          <con:entry>order[modelNumber]</con:entry>
+          <con:entry>order[width]</con:entry>
+          <con:entry>order[height]</con:entry>
+          <con:entry>order[depth]</con:entry>
+          <con:entry>order[startNumber]</con:entry>
+          <con:entry>order[ru]</con:entry>
+          <con:entry>order[posts]</con:entry>
+          <con:entry>order[interiorWidth]</con:entry>
+          <con:entry>order[interiorHeight]</con:entry>
+          <con:entry>order[weight]</con:entry>
+          <con:entry>order[weightCapacity]</con:entry>
+          <con:entry>search</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[startPosition]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>scope</con:entry>
+          <con:entry>scope[]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="create cabinet" id="9d8d564c-3c5c-45fd-93bb-dcaaacbb5b12">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/cabinets" methodName="postCabinetCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="create cabinet" id="7718c050-affc-4b72-b0fb-ffcdb0b25f5c" mediaType="application/json" postQueryString="false">
+        <con:description>Creates a Cabinet resource.</con:description>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"assetNumber": "4post",
+	"cabinetSpecification": "${get cabinet_specification#Response#$['_embedded']['item'][0]['_links']['self']['href']}",
+	"cabinetPeriods": [{
+		"startDate": "2010-10-10",
+		"cabinetStatus": "/ldc-dcim/cabinet-manager/v1/cabinet_statuses/2"
+	}]
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/cabinets</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c03152b9-b189-454e-914a-c9dbbe89b4ad" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="9614e4df-73ea-4c79-827e-3139a92d7a85" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>421eab3a-b075-48fa-94f6-2aefc397c748</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

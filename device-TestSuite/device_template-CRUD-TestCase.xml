@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2a9afa2a-4072-43e2-991a-6baf7b36d159" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="device_template CRUD TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2a9afa2a-4072-43e2-991a-6baf7b36d159fileName">device_template-CRUD-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get device_types" id="f5b758d0-6bfe-4d40-9b86-dc5821689c38">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getDeviceTypeCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/device_types" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get device_types" id="a189ec72-e7e9-4c86-a566-8e055976b251" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_types</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="05f28d6b-72d7-4788-b22f-0ffd3321f98b" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="50913c60-293c-4852-ad9a-a254b81cff71" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value=""/>
+          <con:entry key="order[id]" value=""/>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[id]</con:entry>
+          <con:entry>order[icon]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>id</con:entry>
+          <con:entry>id[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get port_types" id="a67287b3-8bbe-4a67-9e6d-f4dc7a97c48a">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getPortTypeCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/port_types" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get port_types" id="a31353ec-373c-452e-93dd-b0dcb689d850" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/port_types</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="f02c8f27-3cbf-4f17-87ae-2c55debd31f9" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="aae25949-b0d7-465f-858f-ce0f7c2acc10" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value=""/>
+          <con:entry key="order[id]" value=""/>
+          <con:entry key="order[connectionType.id]" value=""/>
+          <con:entry key="id" value=""/>
+          <con:entry key="id[]" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[id]</con:entry>
+          <con:entry>order[connectionType.id]</con:entry>
+          <con:entry>order[connectionType.name]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>id</con:entry>
+          <con:entry>id[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get positions" id="aa1acdbb-b90a-4d63-8a96-616d15bb2c0a">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getPositionCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/positions" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get positions" id="c02f0f85-82bf-4846-b2f3-c9d0cd31e6a9" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/positions</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="e0d67594-b9ff-448b-8cfb-71b81c96012f" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6a5cb0bb-311d-41dc-8bdc-7b87e9296620" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="name" value=""/>
+          <con:entry key="order[id]" value=""/>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[id]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>id</con:entry>
+          <con:entry>id[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get slot_types" id="41c0dfd0-1504-4917-b84f-5fe3c09faa41">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getSlotTypeCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/slot_types" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get slot_types" id="59cda771-e541-47c8-9af8-4a123f926480" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/slot_types</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b8f7957c-22a0-479f-b946-8ac969ff5d1e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6913a5dc-ff5a-450d-a4af-448c99cae790" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="order[modifiedAt]" value=""/>
+          <con:entry key="name" value=""/>
+          <con:entry key="order[id]" value=""/>
+          <con:entry key="id" value=""/>
+          <con:entry key="id[]" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[id]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>id</con:entry>
+          <con:entry>id[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get custom_fields" id="2240e2f8-12de-4bdf-9400-608240c469a7">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getCustomFieldCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/custom_fields" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get custom_fields" id="320c3d95-70be-4480-bcf1-1ba27dd4f5f7" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/customer_custom_fields</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="fe967acd-7130-45a3-8be9-64dbdc4582fb" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="d37f39f9-b318-4134-a0cf-90f306c2fbbb" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="defaultValue" value=""/>
+          <con:entry key="organization[]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="order[modifiedAt]" value=""/>
+          <con:entry key="modifiedAt[strictly_before]" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="order[customFieldType.name]" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+          <con:entry key="order[createdAt]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>defaultValue</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[defaultValue]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>customFieldType.name</con:entry>
+          <con:entry>order[customFieldType.id]</con:entry>
+          <con:entry>order[customFieldType.name]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create device_template" id="2df0b4b5-7c4d-4cae-8369-c7246cdb38e6">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="postDeviceTemplateCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/device_templates" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create device_template" id="4014be17-b88d-478b-b831-481d0a58d4d8" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name}",
+	"modelNumber": "12345",
+	"manufacturer": "qwerty",
+	"width": 1.23,
+	"height": 4.56,
+	"depth": 7.89,
+	"ru": 10,
+	"deviceType": "${get device_types#Response#$['_embedded']['item'][0]['_links']['self']['href']}",
+	"deviceTemplatePorts": [
+		{
+			"quantity": 1,
+			"portType": "${get port_types#Response#$['_embedded']['item'][0]['_links']['self']['href']}",
+			"position": "${get positions#Response#$['_embedded']['item'][0]['_links']['self']['href']}"
+		},
+		{
+			"quantity": 2,
+			"portType": "${get port_types#Response#$['_embedded']['item'][1]['_links']['self']['href']}",
+			"position": "${get positions#Response#$['_embedded']['item'][1]['_links']['self']['href']}"
+		}
+	],
+	"deviceTemplateSlots": [
+		{
+			"quantity": 1,
+			"slotType": "${get slot_types#Response#$['_embedded']['item'][0]['_links']['self']['href']}",
+			"position": "${get positions#Response#$['_embedded']['item'][0]['_links']['self']['href']}"
+		},
+		{
+			"quantity": 2,
+			"slotType": "${get slot_types#Response#$['_embedded']['item'][1]['_links']['self']['href']}",
+			"position": "${get positions#Response#$['_embedded']['item'][1]['_links']['self']['href']}"
+		}
+	],
+	"deviceTemplateCustomFields": [
+		{
+			"value": "foo.bar",
+			"customField": "${get custom_fields#Response#$['_embedded']['item'][0]['_links']['self']['href']}"
+		}
+	]
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="cbad4ccf-334d-4594-a20a-4e5af03d6387" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="f1fc4dc6-7688-4d7e-b0e8-45e6531d5d85" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Read device_template" id="5d021cd0-848b-4212-a76c-98a7b918218f">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getDeviceTemplateItem" resourcePath="/ldc-dcim/cabinet-manager/v1/device_templates/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Read device_template" id="8aca36b8-7b29-4dc6-8760-13f35bc1ca9d" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates/3</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="c6bb6037-1d14-44c9-beb0-44a69071592d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="e2701fc1-2886-43ee-b511-0eda4da222bb" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>Automation: ${=testCase.testSuite.name} / ${=testCase.name}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create device_template#Response#$.guid}"/>
+          <con:entry key="organization[]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Update device_template" id="4eddc43d-dac8-4a92-809e-7d1dae0f6c7f">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="putDeviceTemplateItem" resourcePath="/ldc-dcim/cabinet-manager/v1/device_templates/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Update device_template" id="5d539cfd-c6e2-47b7-a228-49eadeb3d67f" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+	"name": "Automation: ${=testCase.testSuite.name} / ${=testCase.name} / update"
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates/4</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="177155bf-58b5-425e-ba5a-c03aaf1421ee" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="74c49e82-e920-46f1-aafd-b552d65280a2" name="verify name">
+          <con:configuration>
+            <path>$.name</path>
+            <content>Automation: ${=testCase.testSuite.name} / ${=testCase.name} / update</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create device_template#Response#$.guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Delete device_template" id="1ea0a911-8e21-45ea-92c3-f051bd20f4cc">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="deleteDeviceTemplateItem" resourcePath="/ldc-dcim/cabinet-manager/v1/device_templates/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Delete device_template" id="03e2887f-57f1-4de6-b190-30d9c8bfd0f9" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates/8</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="9eea05e6-9a7e-4a4e-9a95-a2a4fa869c6d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>204</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create device_template#Response#$.guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="verify delete device_template" id="544f03c5-f6b9-429b-bfb8-76d50ee96a31">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getDeviceTemplateCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/device_templates" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="verify delete device_template" id="6c7fa4e6-f84e-4d7e-acc7-b2767ac5c925" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/device_templates</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4a9d47f8-fbf8-4424-be73-d0e0b41bf854" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple NotContains" id="76e3a626-e6c4-422d-8fc6-d1838d612f4f" name="Not Contains guid">
+          <con:configuration>
+            <token>${Create device_template#Response#$.guid}</token>
+            <ignoreCase>false</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="ru" value=""/>
+          <con:entry key="depth[]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="createdAt[strictly_after]" value=""/>
+          <con:entry key="weight[]" value=""/>
+          <con:entry key="height[]" value=""/>
+          <con:entry key="order[deviceType.id]" value=""/>
+          <con:entry key="order[deviceType.name]" value=""/>
+          <con:entry key="posts[]" value=""/>
+          <con:entry key="height" value=""/>
+          <con:entry key="order[modelNumber]" value=""/>
+          <con:entry key="modifiedAt[strictly_after]" value=""/>
+          <con:entry key="weight" value=""/>
+          <con:entry key="order[weight]" value=""/>
+          <con:entry key="order[height]" value=""/>
+          <con:entry key="depth" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="organization" value=""/>
+          <con:entry key="modelNumber" value=""/>
+          <con:entry key="deviceType[]" value=""/>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>modelNumber</con:entry>
+          <con:entry>manufacturer</con:entry>
+          <con:entry>deviceType</con:entry>
+          <con:entry>deviceType[]</con:entry>
+          <con:entry>width</con:entry>
+          <con:entry>width[]</con:entry>
+          <con:entry>height</con:entry>
+          <con:entry>height[]</con:entry>
+          <con:entry>depth</con:entry>
+          <con:entry>depth[]</con:entry>
+          <con:entry>ru</con:entry>
+          <con:entry>ru[]</con:entry>
+          <con:entry>posts</con:entry>
+          <con:entry>posts[]</con:entry>
+          <con:entry>weight</con:entry>
+          <con:entry>weight[]</con:entry>
+          <con:entry>order[width]</con:entry>
+          <con:entry>order[height]</con:entry>
+          <con:entry>order[depth]</con:entry>
+          <con:entry>order[ru]</con:entry>
+          <con:entry>order[posts]</con:entry>
+          <con:entry>order[weight]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[manufacturer]</con:entry>
+          <con:entry>order[modelNumber]</con:entry>
+          <con:entry>order[deviceType.id]</con:entry>
+          <con:entry>order[deviceType.name]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:tearDownScript/>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>aa1acdbb-b90a-4d63-8a96-616d15bb2c0a</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

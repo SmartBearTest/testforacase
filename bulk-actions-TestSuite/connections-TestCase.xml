@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f505167c-90b1-4b6d-aaa1-6b59484f9d10" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="connections TestCase" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f505167c-90b1-4b6d-aaa1-6b59484f9d10fileName">connections-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="get devices" id="b0f51b70-3b17-4895-ab84-ea24a779007e">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" methodName="getDeviceCollection" resourcePath="/ldc-dcim/cabinet-manager/v1/devices" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get devices" id="93fe4bd0-5ebb-4888-ae9e-03da0471b350" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/devices</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="817febe9-8572-4526-8136-7600d3b237b8" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="51c513f3-b4c3-491f-9961-cf1cf3f53553" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="installations.position" value=""/>
+          <con:entry key="barcodeNumber" value=""/>
+          <con:entry key="order[deviceOwner.name]" value=""/>
+          <con:entry key="posts" value=""/>
+          <con:entry key="order[deviceType.id]" value=""/>
+          <con:entry key="assetNumber" value="serverX"/>
+          <con:entry key="installations.ruPosition[]" value=""/>
+          <con:entry key="modifiedAt[after]" value=""/>
+          <con:entry key="serviceTag[]" value=""/>
+          <con:entry key="serviceTag" value=""/>
+          <con:entry key="modifiedAt[before]" value=""/>
+          <con:entry key="group" value=""/>
+          <con:entry key="order[installations]" value=""/>
+          <con:entry key="height" value=""/>
+          <con:entry key="order[ru]" value=""/>
+          <con:entry key="serialNumber" value=""/>
+          <con:entry key="order[assetNumber]" value=""/>
+          <con:entry key="weight" value=""/>
+          <con:entry key="order[inputVoltage]" value=""/>
+          <con:entry key="order[height]" value=""/>
+          <con:entry key="order[installations.cabinet.name]" value=""/>
+          <con:entry key="modifiedAt[strictly_before]" value=""/>
+          <con:entry key="order[serviceTag]" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="name" value=""/>
+          <con:entry key="page" value="2"/>
+          <con:entry key="deviceType[]" value=""/>
+          <con:entry key="itemsperpage" value="2"/>
+          <con:entry key="width[]" value=""/>
+          <con:entry key="createdAt[strictly_before]" value=""/>
+          <con:entry key="inputVoltage" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="manufacturer" value=""/>
+          <con:entry key="weight[]" value=""/>
+          <con:entry key="installations.position[]" value=""/>
+          <con:entry key="order[width]" value=""/>
+          <con:entry key="order[deviceOwner.email]" value=""/>
+          <con:entry key="installations.cabinet.name" value=""/>
+          <con:entry key="posts[]" value=""/>
+          <con:entry key="barcodeNumber[]" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+          <con:entry key="installations.cabinet.guid[]" value=""/>
+          <con:entry key="order[serialNumber]" value=""/>
+          <con:entry key="installations.cabinet.guid" value=""/>
+          <con:entry key="order[posts]" value=""/>
+          <con:entry key="organization[]" value=""/>
+          <con:entry key="installations.ruPosition" value=""/>
+          <con:entry key="order[outputVoltage]" value=""/>
+          <con:entry key="organization" value=""/>
+          <con:entry key="order[deviceStatus.name]" value=""/>
+          <con:entry key="width" value=""/>
+          <con:entry key="modelNumber" value=""/>
+          <con:entry key="order[name]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>serialNumber</con:entry>
+          <con:entry>serialNumber[]</con:entry>
+          <con:entry>assetNumber</con:entry>
+          <con:entry>assetNumber[]</con:entry>
+          <con:entry>barcodeNumber</con:entry>
+          <con:entry>barcodeNumber[]</con:entry>
+          <con:entry>serviceTag</con:entry>
+          <con:entry>serviceTag[]</con:entry>
+          <con:entry>modelNumber</con:entry>
+          <con:entry>modelNumber[]</con:entry>
+          <con:entry>manufacturer</con:entry>
+          <con:entry>deviceType</con:entry>
+          <con:entry>deviceType[]</con:entry>
+          <con:entry>width</con:entry>
+          <con:entry>width[]</con:entry>
+          <con:entry>height</con:entry>
+          <con:entry>height[]</con:entry>
+          <con:entry>depth</con:entry>
+          <con:entry>depth[]</con:entry>
+          <con:entry>ru</con:entry>
+          <con:entry>ru[]</con:entry>
+          <con:entry>posts</con:entry>
+          <con:entry>posts[]</con:entry>
+          <con:entry>weight</con:entry>
+          <con:entry>weight[]</con:entry>
+          <con:entry>inputVoltage</con:entry>
+          <con:entry>inputVoltage[]</con:entry>
+          <con:entry>outputVoltage</con:entry>
+          <con:entry>outputVoltage[]</con:entry>
+          <con:entry>order[width]</con:entry>
+          <con:entry>order[height]</con:entry>
+          <con:entry>order[depth]</con:entry>
+          <con:entry>order[ru]</con:entry>
+          <con:entry>order[posts]</con:entry>
+          <con:entry>order[weight]</con:entry>
+          <con:entry>order[inputVoltage]</con:entry>
+          <con:entry>order[outputVoltage]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>search</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>order[name]</con:entry>
+          <con:entry>order[manufacturer]</con:entry>
+          <con:entry>order[modelNumber]</con:entry>
+          <con:entry>order[serialNumber]</con:entry>
+          <con:entry>order[assetNumber]</con:entry>
+          <con:entry>deviceStatus.name</con:entry>
+          <con:entry>deviceStatus.name[]</con:entry>
+          <con:entry>deviceStatus.guid</con:entry>
+          <con:entry>deviceStatus.guid[]</con:entry>
+          <con:entry>installations.cabinet.name</con:entry>
+          <con:entry>exists[slotInstallations]</con:entry>
+          <con:entry>exists[installations]</con:entry>
+          <con:entry>order[installations.cabinet.name]</con:entry>
+          <con:entry>installations.cabinet.guid</con:entry>
+          <con:entry>installations.cabinet.guid[]</con:entry>
+          <con:entry>installations.position</con:entry>
+          <con:entry>installations.position[]</con:entry>
+          <con:entry>notes</con:entry>
+          <con:entry>installations.ruPosition</con:entry>
+          <con:entry>installations.ruPosition[]</con:entry>
+          <con:entry>order[serviceTag]</con:entry>
+          <con:entry>order[deviceType.id]</con:entry>
+          <con:entry>order[deviceType.name]</con:entry>
+          <con:entry>order[deviceStatus.name]</con:entry>
+          <con:entry>order[deviceOwner.name]</con:entry>
+          <con:entry>order[deviceOwner.email]</con:entry>
+          <con:entry>order[installations.ruPosition]</con:entry>
+          <con:entry>order[installations.position]</con:entry>
+          <con:entry>order[devicePorts]</con:entry>
+          <con:entry>order[deviceSlots]</con:entry>
+          <con:entry>order[installations]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>group</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get device1 ports" id="5d3d835c-4f0b-49d9-bdc3-6d37d07bb225">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/devices/{id}/device_ports" methodName="api_devices_device_ports_get_subresource" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get device1 ports" id="1f5ad4ac-ca1b-4e2c-b371-ac9cfb5f319f" mediaType="application/json">
+        <con:description xsi:nil="true"/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/devices/538e40c8-160c-4007-951e-19fe886a4951/device_ports</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="34cb85c8-f65d-4221-b81c-a096d06f8e56" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="5e3a5208-d25b-4fb5-a713-a32684d08fb5" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="connectionsFrom.from" value=""/>
+          <con:entry key="order[number]" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="portType[]" value=""/>
+          <con:entry key="exists[connectionsTo]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="exists[connectionsFrom]" value=""/>
+          <con:entry key="portType" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="organization" value=""/>
+          <con:entry key="guid" value=""/>
+          <con:entry key="modifiedAt[before]" value=""/>
+          <con:entry key="id" value="${get devices#Response#$['_embedded']['item'][0]['guid']}"/>
+          <con:entry key="page" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>portType</con:entry>
+          <con:entry>portType[]</con:entry>
+          <con:entry>position</con:entry>
+          <con:entry>position[]</con:entry>
+          <con:entry>order[number]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>FromOrTo</con:entry>
+          <con:entry>connectionsFrom.from</con:entry>
+          <con:entry>connectionsFrom.from[]</con:entry>
+          <con:entry>connectionsTo.to</con:entry>
+          <con:entry>connectionsTo.to[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>exists[connectionsFrom]</con:entry>
+          <con:entry>exists[connectionsTo]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>pagination</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="get device2 ports" id="c252b429-4a8d-4321-942a-499ec2edc2a0">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/devices/{id}/device_ports" methodName="api_devices_device_ports_get_subresource" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="get device2 ports" id="1f5ad4ac-ca1b-4e2c-b371-ac9cfb5f319f" mediaType="application/json">
+        <con:description xsi:nil="true"/>
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/devices/538e40c8-160c-4007-951e-19fe886a4951/device_ports</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="34cb85c8-f65d-4221-b81c-a096d06f8e56" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="5e3a5208-d25b-4fb5-a713-a32684d08fb5" name="verify totalItems">
+          <con:configuration>
+            <path>//*:totalItems > 0</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="FromOrTo" value=""/>
+          <con:entry key="connectionsFrom.from" value=""/>
+          <con:entry key="createdAt[after]" value=""/>
+          <con:entry key="portType[]" value=""/>
+          <con:entry key="modifiedAt[strictly_after]" value=""/>
+          <con:entry key="connectionsFrom.from[]" value=""/>
+          <con:entry key="guid[]" value=""/>
+          <con:entry key="createdAt[strictly_after]" value=""/>
+          <con:entry key="modifiedAt[strictly_before]" value=""/>
+          <con:entry key="createdAt[before]" value=""/>
+          <con:entry key="modifiedAt[before]" value=""/>
+          <con:entry key="id" value="${get devices#Response#$['_embedded']['item'][1]['guid']}"/>
+          <con:entry key="position" value=""/>
+          <con:entry key="itemsperpage" value=""/>
+          <con:entry key="order[createdAt]" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>portType</con:entry>
+          <con:entry>portType[]</con:entry>
+          <con:entry>position</con:entry>
+          <con:entry>position[]</con:entry>
+          <con:entry>order[number]</con:entry>
+          <con:entry>order[createdAt]</con:entry>
+          <con:entry>order[modifiedAt]</con:entry>
+          <con:entry>FromOrTo</con:entry>
+          <con:entry>connectionsFrom.from</con:entry>
+          <con:entry>connectionsFrom.from[]</con:entry>
+          <con:entry>connectionsTo.to</con:entry>
+          <con:entry>connectionsTo.to[]</con:entry>
+          <con:entry>createdAt[before]</con:entry>
+          <con:entry>createdAt[strictly_before]</con:entry>
+          <con:entry>createdAt[after]</con:entry>
+          <con:entry>createdAt[strictly_after]</con:entry>
+          <con:entry>modifiedAt[before]</con:entry>
+          <con:entry>modifiedAt[strictly_before]</con:entry>
+          <con:entry>modifiedAt[after]</con:entry>
+          <con:entry>modifiedAt[strictly_after]</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>exists[connectionsFrom]</con:entry>
+          <con:entry>exists[connectionsTo]</con:entry>
+          <con:entry>guid</con:entry>
+          <con:entry>guid[]</con:entry>
+          <con:entry>pagination</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Create bulk process" id="fada2bee-a006-4184-b917-88232721f393">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/bulks" methodName="postBulkCollection" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Create bulk process" id="55d044bd-2a33-40ac-8e46-69851319b084" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request>{
+   "tasks" : [
+      {
+         "method" : "POST",
+         "path" : "/connections",
+         "data" : {
+            "name" : "invalid ports / ${=org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(5)}",
+            "from" : "/ldc-dcim/cabinet-manager/v1/device_ports/da1a7536-b801-4fd5-8806-710500c1e1b4",
+            "to" : "/ldc-dcim/cabinet-manager/v1/device_ports/da1a7536-b801-4fd5-8806-710500c1e1a3"
+         }
+      },
+      {
+         "method" : "POST",
+         "path" : "/connections",
+         "data" : {
+            "guid" : "${#TestCase#UUID}",
+            "name" : "valid ports / ${=org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(5)}",
+            "from" : "${get device1 ports#Response#$['_links']['item'][0]['href']}",
+            "to" : "${get device2 ports#Response#$['_links']['item'][0]['href']}"
+         }
+      },
+      {
+         "method" : "POST",
+         "path" : "/connections",
+         "data" : {
+            "name" : "same source / ${=org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(5)}",
+            "from" : "${get device1 ports#Response#$['_links']['item'][0]['href']}",
+            "to" : "${get device2 ports#Response#$['_links']['item'][1]['href']}"
+         }
+      },
+      {
+         "method" : "POST",
+         "path" : "/connections",
+         "data" : {
+            "name" : "same target / ${=org.apache.commons.lang3.RandomStringUtils.randomAlphanumeric(5)}",
+            "from" : "${get device1 ports#Response#$['_links']['item'][1]['href']}",
+            "to" : "${get device2 ports#Response#$['_links']['item'][0]['href']}"
+         }
+      },
+      {
+         "method" : "DELETE",
+         "path" : "/connections/${#TestCase#UUID}"
+      }
+   ]
+}</con:request>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/bulks</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b0798dae-52c0-418b-8e3e-27368c783882" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="a59c1dec-a386-4654-a6a8-db97864b5ad6" name="exists guid">
+          <con:configuration>
+            <path>$.guid</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Read bulk process" id="183bd6b9-8629-4c37-8159-5854afd2e684">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/bulks/{id}" methodName="getBulkItem" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Read bulk process" id="53e268d5-5dec-4f2e-aaa2-f1d99424391e" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/bulks/3518589d-b452-4dcb-be6e-80acd6d80630</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="d89e7225-086e-41cc-a0e7-96ed814d0970" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Existence Match" id="bf2a006d-2b10-4520-a46d-576e2f6a2da6" name="exists status">
+          <con:configuration>
+            <path>$.status</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create bulk process#Response#$.guid}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="goto" name="poll for complete" id="f8e36aa1-c04e-4d35-a021-058d16ce573b">
+    <con:settings/>
+    <con:config xsi:type="con:GotoStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:condition>
+        <con:name>poll</con:name>
+        <con:type>XPATH</con:type>
+        <con:expression>//*:Response/*:status != 'Completed'</con:expression>
+        <con:targetStep>Read bulk process</con:targetStep>
+      </con:condition>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="Read bulk tasks" id="cb2f7e18-8424-4df3-8100-ef890e654c6f">
+    <con:settings/>
+    <con:config service="ldc-dcim/cabinet-manager" resourcePath="/ldc-dcim/cabinet-manager/v1/bulks/{id}/tasks" methodName="api_bulks_tasks_get_subresource" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Read bulk tasks" id="952cf2a2-52c4-4f4c-a79b-de0c4438c7bb" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://api.qa.switch.com</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://api.qa.switch.com/ldc-dcim/cabinet-manager/v1/bulks/3518589d-b452-4dcb-be6e-80acd6d80630/tasks</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="b91c5235-d33e-4ce5-8f0d-19be8cdeffff" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" id="3aafc783-994d-4270-82ef-f512f8f1a49f" name="verify status0">
+          <con:configuration>
+            <path>$['_embedded']['item'][0]['status']</path>
+            <content>Failure</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" name="verify status1" id="73b65b06-3d4e-4844-a9f4-e19d525b4b00">
+          <con:configuration>
+            <path>$['_embedded']['item'][1]['status']</path>
+            <content>Success</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" name="verify status2" id="ca2cb859-69b0-4ece-b4fc-96096d5ec866">
+          <con:configuration>
+            <path>$['_embedded']['item'][2]['status']</path>
+            <content>Failure</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" name="verify status3" id="bf5e97a6-3153-4e4d-a7a7-eedb1f9ccc39">
+          <con:configuration>
+            <path>$['_embedded']['item'][3]['status']</path>
+            <content>Failure</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="JsonPath Match" name="verify status4" id="6bdee45d-5313-4768-b50a-ccecdb3fd161">
+          <con:configuration>
+            <path>$['_embedded']['item'][4]['status']</path>
+            <content>Success</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="id" value="${Create bulk process#Response#$.guid}"/>
+          <con:entry key="page" value=""/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>id</con:entry>
+          <con:entry>page</con:entry>
+          <con:entry>itemsperpage</con:entry>
+          <con:entry>organization</con:entry>
+          <con:entry>organization[]</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:setupScript>testCase.setPropertyValue("UUID", UUID.randomUUID().toString())</con:setupScript>
+  <con:tearDownScript/>
+  <con:properties>
+    <con:property>
+      <con:name>UUID</con:name>
+      <con:value>unknown</con:value>
+    </con:property>
+  </con:properties>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>1a0b9558-caf5-4d18-925a-badf6eb6a8eb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a9bde6bd-e9fc-4b6e-b14e-10e8c3ffe703</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>eadc53b4-1561-41f9-857e-700a72ef2abf</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>92577bd5-698d-4ef7-a2fe-0b4af7c1fdb0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>c252b429-4a8d-4321-942a-499ec2edc2a0</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>f8e36aa1-c04e-4d35-a021-058d16ce573b</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
